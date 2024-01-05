@@ -1,6 +1,6 @@
 import React from 'react';
 // images
-// import Logo from '../assets/logo.svg';
+// import Logo from '../assets/logo.png';
 
 const Header = () => {
   return (
@@ -9,8 +9,13 @@ const Header = () => {
         <div className="flex justify-between items-center">
           {/* logo */}
           {/* <a href="#">
-              <img src={Logo} alt="" />
-            </a> */}
+            <img src={Logo} className="p-1" alt="" />
+          </a> */}
+          <div className="p-1">
+            <h1 className="text-gradient text-[20px] font-bold leading-[0.8] lg:text-left lg:text-[30px]">
+              GRACE <span className="block text-white">ANDAYA</span>
+            </h1>
+          </div>
           {/* button */}
           <button className="btn btn-sm">Work with me</button>
         </div>

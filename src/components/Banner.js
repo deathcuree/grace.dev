@@ -32,7 +32,7 @@ const Banner = () => {
               initial="hidden"
               whileInView={'show'}
               viewport={{ once: false, amount: 0.7 }}
-              className="text-[55px] font-bold leading-[0.8] lg:text-[110px]"
+              className=" text-[55px] font-bold leading-[0.8] lg:text-[110px]"
             >
               GRACE <span>ANDAYA</span>
             </motion.h1>
@@ -46,7 +46,7 @@ const Banner = () => {
             >
               <span className="text-white mr-4">I am a</span>
               <TypeAnimation
-                sequence={['Web Developer', 2000, 'Web Developer', 2000]}
+                sequence={['Junior', 2000, 'Web Developer', 2000]}
                 speed={50}
                 className="text-accent"
                 wrapper="span"
