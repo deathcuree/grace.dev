@@ -114,9 +114,15 @@ const Banner = () => {
             variants={fadeIn('down', 0.3)}
             initial="hidden"
             whileInView={'show'}
-            className="hidden rounded-full lg:flex flex-1 max-w-[320px] lg:max-w-[482px] rounded-full"
+            className="hidden lg:flex flex-1 max-w-[320px] lg:max-w-[482px] rounded-full"
           >
-            <img src={solo_picture} alt="solo" />
+            <div className="rounded-full overflow-hidden">
+              <img
+                src={solo_picture}
+                alt="solo"
+                className="w-full h-full object-cover"
+              />
+            </div>
           </motion.div>
         </div>
       </div>
