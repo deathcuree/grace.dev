@@ -19,14 +19,14 @@ const Contact = () => {
             viewport={{ once: false, amount: 0.3 }}
             className="flex-1 flex justify-start items-center"
           >
-            <div>
+            <div className="lg:text-left">
               <h4 className="text-xl uppercase text-accent font-medium mb-2 tracking-wide">
                 Get in touch
               </h4>
-              <h2 className="text-[45px] lg:text-[90px] leading-none mb-12">
+              <h2 className="text-[45px] lg:text-[90px] leading-none mb-4">
                 Let's work together!
               </h2>
-              <div className="flex text-[20px] lg:text-[20px] gap-x-6 max-w-max mx-auto lg:mx-0">
+              <div className="flex text-[20px] gap-x-6 lg:mx-0 mb-4">
                 <a href="https://github.com/deathcuree">
                   <FaGithub />
                 </a>

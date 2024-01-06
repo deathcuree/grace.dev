@@ -2,12 +2,15 @@ import React from 'react';
 // countup
 import CountUp from 'react-countup';
 // intersection overser hook
-import { InView, useInView } from 'react-intersection-observer';
+import { InView } from 'react-intersection-observer';
 // motion
 import { motion } from 'framer-motion';
 // variant
 import { fadeIn } from '../variants';
+// image
 import Image from '../assets/me_laptop.jpeg';
+// link
+import { Link } from 'react-scroll';
 
 const About = () => {
   return (
@@ -19,8 +22,7 @@ const About = () => {
             variants={fadeIn('right', 0.3)}
             initial="hidden"
             whileInView={'show'}
-            viewport={{ once: false, amount: 0.3 }}
-            className="flex-1 bg-contain bg-no-repeat h-[640px] mix-blend-lighten bg-top"
+            className="hidden lg:flex flex-1 max-w-[320px] lg:max-w-[482px]"
           >
             <img
               src={Image}
@@ -41,7 +43,7 @@ const About = () => {
               A fresh grad and a former Instructor from Gordon College diving
               into the depth of Web Developer.
             </h3>
-            <p>
+            <p className="mb-4">
               Having an experience with HTML, CSS, Bootstrap, Tailwind,
               JavaScript, React, PHP, Laravel. I am enthusiastic in learning the
               progressive technology, especially in terms of programming
@@ -49,7 +51,7 @@ const About = () => {
               technology.
             </p>
             {/* stats */}
-            <div className="flex gap-x-6 lg:gap-x-10 mb-12">
+            <div className="flex gap-x-6 lg:gap-x-10 mb-4">
               <div className="text-[40px] font-tertiary text-gradient mb-2">
                 {InView ? <CountUp start={0} end={4} duration={3} /> : null}
                 <div className="font-primary text-sm tracking-[2px]">
@@ -65,11 +67,14 @@ const About = () => {
                 </div>
               </div>
             </div>
+
             <div className="flex gap-x-8 items-center">
-              <button className="btn btn-lg">Contact me</button>
-              <a href="#" className="text-gradient btn-link">
-                My Portfolio
-              </a>
+              <Link to="contact">
+                <button className="btn btn-lg">Contact me</button>
+              </Link>
+              <Link to="project">
+                <p className="text-gradient btn-link">My Portfolio</p>
+              </Link>
             </div>
           </motion.div>
         </div>

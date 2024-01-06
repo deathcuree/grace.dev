@@ -1,6 +1,6 @@
 import React from 'react';
-// images
-// import Logo from '../assets/logo.png';
+// link
+import { Link } from 'react-scroll';
 
 const Header = () => {
   return (
@@ -8,16 +8,17 @@ const Header = () => {
       <div className="container mx-auto">
         <div className="flex justify-between items-center">
           {/* logo */}
-          {/* <a href="#">
-            <img src={Logo} className="p-1" alt="" />
-          </a> */}
-          <div className="p-1">
-            <h1 className="text-gradient text-[20px] font-bold leading-[0.8] lg:text-left lg:text-[30px]">
-              GRACE <span className="block text-white">ANDAYA</span>
-            </h1>
-          </div>
+          <Link to="home">
+            <div className="p-1">
+              <h1 className="text-gradient text-[20px] font-bold leading-[0.8] lg:text-left lg:text-[30px]">
+                GRACE <span className="block text-white">ANDAYA</span>
+              </h1>
+            </div>
+          </Link>
           {/* button */}
-          <button className="btn btn-sm">Work with me</button>
+          <Link to="contact">
+            <button className="btn btn-sm">Work with me</button>
+          </Link>
         </div>
       </div>
     </header>
