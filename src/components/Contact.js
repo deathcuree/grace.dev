@@ -25,18 +25,18 @@ const Contact = () => {
               </h4>
               <h2 className="text-[45px] lg:text-[90px] leading-none mb-12">
                 Let's work together!
-                <div className="flex text-[20px] lg:text-[20px] gap-x-6 max-w-max mx-auto lg:mx-0">
-                  <a href="https://github.com/deathcuree">
-                    <FaGithub />
-                  </a>
-                  <a href="https://www.facebook.com/deathcureee/">
-                    <FaFacebook />
-                  </a>
-                  <a href="https://www.instagram.com/deathcureeee/">
-                    <FaInstagram />
-                  </a>
-                </div>
               </h2>
+              <div className="flex text-[20px] lg:text-[20px] gap-x-6 max-w-max mx-auto lg:mx-0">
+                <a href="https://github.com/deathcuree">
+                  <FaGithub />
+                </a>
+                <a href="https://www.facebook.com/deathcureee/">
+                  <FaFacebook />
+                </a>
+                <a href="https://www.instagram.com/deathcureeee/">
+                  <FaInstagram />
+                </a>
+              </div>
             </div>
           </motion.div>
           {/* form */}

@@ -5,8 +5,6 @@ import { motion } from 'framer-motion';
 import { fadeIn } from '../variants';
 // img
 import Img1 from '../assets/portfolio-img1.png';
-import Img2 from '../assets/portfolio-img2.png';
-import Img3 from '../assets/portfolio-img3.png';
 
 const Project = () => {
   return (
@@ -43,11 +41,13 @@ const Project = () => {
               />
               {/* pretitle */}
               <div className="absolute -bottom-full left-12 group-hover:bottom-24 transition-all duration-500 z-50">
-                <span className="text-gradient">UI/UX Design</span>
+                <span className="text-gradient">Personal Portfolio</span>
               </div>
               {/* title */}
               <div className="absolute -bottom-full left-12 group-hover:bottom-14 transition-all duration-700 z-50">
-                <span className="text-3xl text-white">Project Title</span>
+                <span className="text-3xl text-white">
+                  HTML, CSS, Bootstrap
+                </span>
               </div>
             </div>
           </motion.div>
@@ -65,16 +65,19 @@ const Project = () => {
               {/* img */}
               <img
                 className="group-hover:scale-125 transition-all duration-500"
-                src={Img2}
+                src={Img1}
                 alt="project1"
               />
               {/* pretitle */}
               <div className="absolute -bottom-full left-12 group-hover:bottom-24 transition-all duration-500 z-50">
-                <span className="text-gradient">UI/UX Design</span>
+                <span className="text-gradient">MERN Stack</span>
               </div>
               {/* title */}
-              <div className="absolute -bottom-full left-12 group-hover:bottom-14 transition-all duration-700 z-50">
-                <span className="text-3xl text-white">Project Title</span>
+              <div className="absolute -bottom-full left-12 group-hover:bottom-10 transition-all duration-700 z-50">
+                <span className="text-3xl text-white">
+                  Mern Stack Application
+                </span>
+                <p className="text-sm">In progress</p>
               </div>
             </div>
             {/* image 3 */}
@@ -84,16 +87,19 @@ const Project = () => {
               {/* img */}
               <img
                 className="group-hover:scale-125 transition-all duration-500"
-                src={Img3}
+                src={Img1}
                 alt="project3"
               />
               {/* pretitle */}
-              <div className="absolute -bottom-full left-12 group-hover:bottom-24 transition-all duration-500 z-50">
-                <span className="text-gradient">UI/UX Design</span>
+              <div className="absolute -bottom-full left-12 group-hover:bottom-28 transition-all duration-500 z-50">
+                <span className="text-gradient">Rental Management System</span>
               </div>
               {/* title */}
               <div className="absolute -bottom-full left-12 group-hover:bottom-14 transition-all duration-700 z-50">
-                <span className="text-3xl text-white">Project Title</span>
+                <span className="text-3xl text-white">
+                  Jahnai Boarding Home
+                </span>
+                <p className="text-sm">In progress</p>
               </div>
             </div>
           </motion.div>

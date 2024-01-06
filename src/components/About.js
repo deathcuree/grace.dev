@@ -7,6 +7,7 @@ import { InView, useInView } from 'react-intersection-observer';
 import { motion } from 'framer-motion';
 // variant
 import { fadeIn } from '../variants';
+import Image from '../assets/me_laptop.jpeg';
 
 const About = () => {
   return (
@@ -20,7 +21,13 @@ const About = () => {
             whileInView={'show'}
             viewport={{ once: false, amount: 0.3 }}
             className="flex-1 bg-contain bg-no-repeat h-[640px] mix-blend-lighten bg-top"
-          ></motion.div>
+          >
+            <img
+              src={Image}
+              alt="solo"
+              className="w-full h-full object-cover"
+            />
+          </motion.div>
           {/* text */}
           <motion.div
             variants={fadeIn('right', 0.5)}
