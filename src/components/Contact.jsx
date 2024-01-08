@@ -7,25 +7,26 @@ import { FaGithub, FaFacebook, FaInstagram } from 'react-icons/fa';
 import { fadeIn } from '../variants';
 // emailjs sender function
 import emailjs from '@emailjs/browser';
-import { Formik, Form, Field, ErrorMessage } from 'formik';
+// formik form handling
+import { Formik, Field } from 'formik';
 import * as Yup from 'yup';
 
 const Contact = () => {
+  const [isMessageSent, setMessageSent] = useState(false);
   const form = useRef();
-
-  // Your validation schema using Yup
+  // validation schema using Yup
   const validationSchema = Yup.object({
     // Define validation rules for each field
-    to_name: Yup.string()
-      .min(5, 'Your name must be 5 characters long!')
-      .required('Required'),
-    from_name: Yup.string().email('Invalid email address').required('Required'),
+    to_name: Yup.string().min(5, 'Invalid name.').required('Name is required'),
+    from_name: Yup.string()
+      .email('Invalid email address')
+      .required('Email is required'),
     message: Yup.string()
-      .min(10, 'Your message must be at least 10 characters long!')
-      .required('Required'),
+      .min(10, 'Your message must be at least 10 characters long.')
+      .required('Message is required'),
   });
 
-  // Your submit function
+  // submit function
   const sendEmail = (values, { setSubmitting }) => {
     // Send email logic using the values object
     emailjs
@@ -39,14 +40,16 @@ const Contact = () => {
         (result) => {
           console.log(result.text);
           console.log('message sent');
-          setSubmitting(false); // Set submitting to false after success
+          setMessageSent(true); // Update state to indicate success
+          setSubmitting(false);
         },
         (error) => {
           console.log(error.text);
-          setSubmitting(false); // Set submitting to false after error
+          setSubmitting(false);
         }
       );
   };
+
   return (
     <section className="py-16 lg:section" id="contact">
       <div className="container mx-auto">
@@ -95,37 +98,74 @@ const Contact = () => {
                 initial="hidden"
                 whileInView={'show'}
                 viewport={{ once: false, amount: 0.3 }}
-                className="flex-1 border rounded-2xl flex flex-col gap-y-6 pb-24 p-6 items-start"
+                className="flex-1 border rounded-2xl flex flex-col gap-y-6 pb-12  p-6 items-start"
                 ref={form}
                 onSubmit={handleSubmit}
               >
-                <Field
-                  className="bg-transparent border-b py-3 outline-none w-full placeholder:text-white focus:border-accent transition-all"
-                  name="to_name"
-                  type="text"
-                  placeholder="Your name"
-                />
-                <ErrorMessage name="to_name" />
+                <Field name="to_name">
+                  {({ field, form, meta }) => (
+                    <>
+                      <input
+                        {...field}
+                        className="bg-transparent border-b py-3 outline-none w-full placeholder:text-white focus:border-accent transition-all"
+                        type="text"
+                        placeholder="Your name"
+                      />
+                      {meta.error && meta.touched && (
+                        <div className="text-sm text-red-800 dark:text-red-400">
+                          {meta.error}
+                        </div>
+                      )}
+                    </>
+                  )}
+                </Field>
 
-                <Field
-                  className="bg-transparent border-b py-3 outline-none w-full placeholder:text-white focus:border-accent transition-all"
-                  name="from_name"
-                  type="email"
-                  placeholder="Your email"
-                />
-                <ErrorMessage name="from_name" />
+                <Field name="from_name">
+                  {({ field, form, meta }) => (
+                    <>
+                      <input
+                        {...field}
+                        className="bg-transparent border-b py-3 outline-none w-full placeholder:text-white focus:border-accent transition-all"
+                        type="email"
+                        placeholder="Your email"
+                      />
+                      {meta.error && meta.touched && (
+                        <div className="text-sm text-red-800 dark:text-red-400">
+                          {meta.error}
+                        </div>
+                      )}
+                    </>
+                  )}
+                </Field>
 
-                <Field
-                  as="textarea"
-                  className="bg-transparent border-b py-12 outline-none w-full placeholder:text-white focus:border-accent transition-all resize-none mb-12"
-                  name="message"
-                  placeholder="Your message"
-                />
-                <ErrorMessage name="message" />
+                <Field name="message">
+                  {({ field, form, meta }) => (
+                    <>
+                      <input
+                        {...field}
+                        className="bg-transparent border-b py-3 outline-none w-full placeholder:text-white focus:border-accent transition-all"
+                        type="text"
+                        placeholder="Your message"
+                      />
+                      {meta.error && meta.touched && (
+                        <div className="text-sm text-red-800 dark:text-red-400">
+                          {meta.error}
+                        </div>
+                      )}
+                    </>
+                  )}
+                </Field>
 
                 <button className="btn btn-lg" type="submit" value="sendEmail">
                   Send message
                 </button>
+
+                {isMessageSent && (
+                  <p className="flex items-center text-sm font-medium text-accent">
+                    Your message has been sent. Looking forward to talking with
+                    you!
+                  </p>
+                )}
               </motion.form>
             )}
           </Formik>
