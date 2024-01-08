@@ -1,15 +1,63 @@
-import React, { useRef } from 'react';
+import React, { useState, useRef } from 'react';
 // motion
 import { motion } from 'framer-motion';
 // icons
 import { FaGithub, FaFacebook, FaInstagram } from 'react-icons/fa';
 // variants
 import { fadeIn } from '../variants';
+// emailjs sender function
 import emailjs from '@emailjs/browser';
 
 const Contact = () => {
   const form = useRef();
+  const validEmailRegex = RegExp(
+    /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i
+  );
 
+  // initialize state for errors
+  const [errors, setErrors] = useState({
+    to_name: '',
+    from_name: '',
+    message: '',
+  });
+
+  // validation functions
+  const validateInput = (name, value) => {
+    switch (name) {
+      case 'to_name':
+        setErrors((prevErrors) => ({
+          ...prevErrors,
+          to_name:
+            value.length < 5 ? 'Your name must be 5 characters long!' : '',
+        }));
+        break;
+      case 'from_name':
+        setErrors((prevErrors) => ({
+          ...prevErrors,
+          from_name: validEmailRegex.test(value) ? '' : 'Email is not valid!',
+        }));
+        break;
+      case 'message':
+        setErrors((prevErrors) => ({
+          ...prevErrors,
+          message:
+            value.length < 10
+              ? 'Your message must be at least 10 characters long!'
+              : '',
+        }));
+        break;
+      default:
+        break;
+    }
+  };
+
+  // handle change event
+  const handleChange = (event) => {
+    const { name, value } = event.target;
+    validateInput(name, value);
+  };
+
+  // handles submit button
   const sendEmail = (e) => {
     e.preventDefault();
 
@@ -70,24 +118,31 @@ const Contact = () => {
             viewport={{ once: false, amount: 0.3 }}
             className="flex-1 border rounded-2xl flex flex-col gap-y-6 pb-24 p-6 items-start"
             ref={form}
+            onChange={handleChange}
             onSubmit={sendEmail}
           >
+            {errors.from_name && (
+              <p className="error-message">{errors.from_name}</p>
+            )}
             <input
               className="bg-transparent border-b py-3 outline-none w-full placeholder:text-white focus:border-accent transition-all"
               name="to_name"
               type="text"
               placeholder="Your name"
+              onChange={handleChange}
             />
             <input
               className="bg-transparent border-b py-3 outline-none w-full placeholder:text-white focus:border-accent transition-all"
               name="from_name"
               type="email"
               placeholder="Your email"
+              onChange={handleChange}
             />
             <textarea
               className="bg-transparent border-b py-12 outline-none w-full placeholder:text-white focus:border-accent transition-all resize-none mb-12"
               name="message"
               placeholder="Your message"
+              onChange={handleChange}
             ></textarea>
             <button className="btn btn-lg" type="submit" value="sendEmail">
               Send message
