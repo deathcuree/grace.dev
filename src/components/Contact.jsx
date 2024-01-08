@@ -143,7 +143,7 @@ const Contact = () => {
                     <>
                       <input
                         {...field}
-                        className="bg-transparent border-b py-3 outline-none w-full placeholder:text-white focus:border-accent transition-all"
+                        className="bg-transparent border-b pb-24 py-3 outline-none w-full placeholder:text-white focus:border-accent transition-all"
                         type="text"
                         placeholder="Your message"
                       />

@@ -5,6 +5,8 @@ import { motion } from 'framer-motion';
 import { fadeIn } from '../variants';
 // img
 import Img1 from '../assets/portfolio-img1.png';
+import Img2 from '../assets/portfolio-img2.png';
+import Img3 from '../assets/portfolio-img3.png';
 
 const Project = () => {
   return (
@@ -65,8 +67,8 @@ const Project = () => {
               {/* img */}
               <img
                 className="group-hover:scale-125 transition-all duration-500"
-                src={Img1}
-                alt="project1"
+                src={Img2}
+                alt="project2"
               />
               {/* pretitle */}
               <div className="absolute -bottom-full left-12 group-hover:bottom-24 transition-all duration-500 z-50">
@@ -87,7 +89,7 @@ const Project = () => {
               {/* img */}
               <img
                 className="group-hover:scale-125 transition-all duration-500"
-                src={Img1}
+                src={Img3}
                 alt="project3"
               />
               {/* pretitle */}

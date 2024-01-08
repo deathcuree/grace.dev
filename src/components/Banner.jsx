@@ -79,36 +79,36 @@ const Banner = () => {
             </motion.div>
             {/* socials */}
             <motion.div
-              variants={fadeIn('up', 0.7)}
+              variants={fadeIn('up', 0.6)}
               initial="hidden"
               whileInView={'show'}
-              viewport={{ once: false, amount: 0.7 }}
+              viewport={{ once: false, amount: 0.6 }}
               className="flex text-[20px] gap-x-6 max-w-max mx-auto lg:mx-0"
             >
-              <a href="#">
+              <p>
                 <DiHtml5 />
-              </a>
-              <a href="#">
+              </p>
+              <p>
                 <IoLogoCss3 />
-              </a>
-              <a href="#">
+              </p>
+              <p>
                 <FaBootstrap />
-              </a>
-              <a href="#">
+              </p>
+              <p>
                 <SiTailwindcss />
-              </a>
-              <a href="#">
+              </p>
+              <p>
                 <IoLogoJavascript />
-              </a>
-              <a href="#">
+              </p>
+              <p>
                 <FaReact />
-              </a>
-              <a href="#">
+              </p>
+              <p>
                 <FaPhp />
-              </a>
-              <a href="#">
+              </p>
+              <p>
                 <FaLaravel />
-              </a>
+              </p>
             </motion.div>
           </div>
           {/* image */}
