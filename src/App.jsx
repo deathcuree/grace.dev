@@ -1,11 +1,10 @@
-import React from 'react';
-// components
+import About from './components/About';
 import Banner from './components/Banner';
+import Contact from './components/Contact';
 import Header from './components/Header';
 import Nav from './components/Nav';
-import About from './components/About';
 import Project from './components/Project';
-import Contact from './components/Contact';
+import React from 'react';
 
 const App = () => {
   return (
