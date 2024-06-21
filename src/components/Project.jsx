@@ -1,22 +1,25 @@
-import React from 'react';
+import React from "react";
 // motion
-import { motion } from 'framer-motion';
+import { motion } from "framer-motion";
 // variants
-import { fadeIn } from '../variants';
+import { fadeIn } from "../variants";
 // img
-import Img1 from '../assets/portfolio-img1.png';
-import Img2 from '../assets/portfolio-img2.png';
-import Img3 from '../assets/portfolio-img3.png';
+import Img1 from "../assets/portfolio-img1.png";
+import Img2 from "../assets/portfolio-img2.png";
+import Img3 from "../assets/portfolio-img3.png";
 
 const Project = () => {
   return (
-    <section className="section" id="project">
+    <section
+      className="section"
+      id="project"
+    >
       <div className="container mx-auto">
         <div className="flex flex-col lg:flex-row gap-x-10">
           <motion.div
-            variants={fadeIn('right', 0.3)}
+            variants={fadeIn("right", 0.3)}
             initial="hidden"
-            whileInView={'show'}
+            whileInView={"show"}
             viewport={{ once: false, amount: 0.3 }}
             className="flex-1 flex flex-col gap-y-12 mb-10 lg:mb-0"
           >
@@ -24,10 +27,8 @@ const Project = () => {
             <div>
               <h2 className="h2 leading-tight text-accent">My projects.</h2>
               <p className="max-w-sm mb-16">
-                I've assembled a varied range of projects, these include
-                projects from bootcamps, school projects driving creative
-                applications of knowledge, and personal ventures exploring
-                different technologies.
+                I've assembled a varied range of projects, these include projects from bootcamps, school projects driving creative applications of knowledge, and personal
+                ventures exploring different technologies.
               </p>
               <button className="btn btn-sm">View all projects.</button>
             </div>
@@ -47,16 +48,14 @@ const Project = () => {
               </div>
               {/* title */}
               <div className="absolute -bottom-full left-12 group-hover:bottom-14 transition-all duration-700 z-50">
-                <span className="text-3xl text-white">
-                  HTML, CSS, Bootstrap
-                </span>
+                <span className="text-3xl text-white">HTML, CSS, Bootstrap</span>
               </div>
             </div>
           </motion.div>
           <motion.div
-            variants={fadeIn('left', 0.2)}
+            variants={fadeIn("left", 0.2)}
             initial="hidden"
-            whileInView={'show'}
+            whileInView={"show"}
             viewport={{ once: false, amount: 0.3 }}
             className="flex-1 flex flex-col gap-y-10"
           >
@@ -76,9 +75,7 @@ const Project = () => {
               </div>
               {/* title */}
               <div className="absolute -bottom-full left-12 group-hover:bottom-10 transition-all duration-700 z-50">
-                <span className="text-3xl text-white">
-                  Mern Stack Application
-                </span>
+                <span className="text-3xl text-white">Mern Stack Application</span>
                 <p className="text-sm">In progress</p>
               </div>
             </div>
@@ -98,9 +95,7 @@ const Project = () => {
               </div>
               {/* title */}
               <div className="absolute -bottom-full left-12 group-hover:bottom-14 transition-all duration-700 z-50">
-                <span className="text-3xl text-white">
-                  Jahnai Boarding Home
-                </span>
+                <span className="text-3xl text-white">Jahnai Boarding Home</span>
                 <p className="text-sm">In progress</p>
               </div>
             </div>
