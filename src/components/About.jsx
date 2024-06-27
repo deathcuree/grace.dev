@@ -45,9 +45,9 @@ const About = () => {
             <h3 className="h3 mb-4">Former Junior Developer Intern at a Startup Company</h3>
             <p className="mb-4">
               During my internship, I gained substantial experience with Angular and TypeScript. I started on the frontend, where I utilized PrimeNG and conducted tests
-              using Cypress and Lighthouse. I was later assigned to Full-Stack development, learning about RESTful APIs and testing them with Postman. I also had the
-              opportunity to work with WebSockets, integrating them with APIs through AWS Event Bridge. Additionally, I became proficient in code testing with Jest and
-              application testing using CI/CD pipelines in Jenkins. I seamlessly managed and created databases and backend systems.
+              using Cypress and Lighthouse. I was later assigned to Full-Stack development, learning about RESTful APIs utilizing them with WebSockets and Event Bridge
+              and tested them with Postman. Additionally, I became proficient in code testing with Jest and application testing using CI/CD pipelines in Jenkins. Lastly I
+              seamlessly managed and created databases and backend systems.
             </p>
             {/* stats */}
             <div className="flex gap-x-6 lg:gap-x-10 mb-4 mt-4">

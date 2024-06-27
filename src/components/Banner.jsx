@@ -85,7 +85,7 @@ const Banner = () => {
               initial="hidden"
               whileInView={"show"}
               viewport={{ once: false, amount: 0.6 }}
-              className="flex text-[20px] gap-x-6 max-w-max mx-auto lg:mx-0"
+              className="flex flex-wrap justify-center items-center text-[20px] gap-x-6 max-w-max mx-auto lg:mx-0"
             >
               <p>
                 <DiHtml5 />
