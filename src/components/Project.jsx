@@ -18,8 +18,9 @@ const Project = () => {
 						<div>
 							<h2 className="h2 leading-tight text-accent">My projects.</h2>
 							<p className="max-w-sm mb-16">
-								I've assembled a varied range of projects, these include projects from bootcamps, school projects
-								driving creative applications of knowledge, and personal ventures exploring different technologies.
+								I've assembled a varied range of projects, these include projects from bootcamps, school
+								projects driving creative applications of knowledge, and personal ventures exploring
+								different technologies.
 							</p>
 							<button className="btn btn-sm">View all projects.</button>
 						</div>
@@ -28,7 +29,11 @@ const Project = () => {
 							{/* overlay */}
 							<div className="group-hover:bg-black/70 w-full h-full absolute z-40 transition-all duration-300"></div>
 							{/* img */}
-							<img className="group-hover:scale-125 transition-all duration-500" src={Img1} alt="project1" />
+							<img
+								className="group-hover:scale-125 transition-all duration-500"
+								src={Img1}
+								alt="project1"
+							/>
 							{/* pretitle */}
 							<div className="absolute -bottom-full left-12 group-hover:bottom-24 transition-all duration-500 z-50">
 								<span className="text-gradient">Personal Portfolio</span>
