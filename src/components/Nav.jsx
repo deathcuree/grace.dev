@@ -1,10 +1,6 @@
 import React from "react";
-
-// import icons
 import { BiHomeAlt, BiUser } from "react-icons/bi";
 import { BsBriefcase, BsChatSquareText } from "react-icons/bs";
-
-// link
 import { Link } from "react-scroll";
 
 const Nav = () => {

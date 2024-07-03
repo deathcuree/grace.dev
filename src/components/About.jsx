@@ -1,15 +1,9 @@
 import React from "react";
-// countup
 import CountUp from "react-countup";
-// intersection overser hook
 import { InView } from "react-intersection-observer";
-// motion
 import { motion } from "framer-motion";
-// variant
 import { fadeIn } from "../variants";
-// image
 import Image from "../assets/me_laptop.jpeg";
-// link
 import { Link } from "react-scroll";
 
 const About = () => {
