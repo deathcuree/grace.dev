@@ -29,12 +29,12 @@ const About = () => {
 						<h2 className="h2 text-accent">About me.</h2>
 						<h3 className="h3 mb-4">A former Junior Intern at a Startup Company</h3>
 						<p className="mb-4">
-							During my internship, I gained substantial experience with Angular and TypeScript. I started
-							on the frontend, where I utilized PrimeNG and conducted tests using Cypress and Lighthouse.
-							I was later assigned to Full-Stack development, learning about RESTful APIs utilizing them
-							with WebSockets and Event Bridge and tested them with Postman. Additionally, I became
-							proficient in code testing with Jest and application testing using CI/CD pipelines in
-							Jenkins. Lastly I seamlessly managed and created databases and backend systems.
+							In my latest internship, I gained experience in Frontend and Backend. Specifically, I
+							learned about creating components in Angular 17 using Typescript and spec testing for the
+							codes. I was later assigned to align APIs and send emails using Mailgun templates.
+							Additionally, I managed the MongoDB database, creating the schemas on each database. I am
+							now learning about Websockets, and Event Bridge in AWS. I like learning and adapting to new
+							technologies as I grow.
 						</p>
 						{/* stats */}
 						<div className="flex gap-x-6 lg:gap-x-10 mb-4">
