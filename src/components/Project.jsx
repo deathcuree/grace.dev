@@ -20,7 +20,7 @@ const Project = () => {
 						<div>
 							<h2 className="h2 leading-tight text-accent">My projects.</h2>
 							<p className="max-w-sm mb-16">
-								I've assembled a varied range of projects, these include projects from bootcamps, school
+								I've assembled a varied range of projects, these include projects from personal, business, work
 								projects driving creative applications of knowledge, and personal ventures exploring
 								different technologies.
 							</p>
@@ -42,7 +42,7 @@ const Project = () => {
 							</div>
 							{/* title */}
 							<div className="absolute -bottom-full left-12 group-hover:bottom-14 transition-all duration-700 z-50">
-								<span className="text-3xl text-white">HTML, CSS, Bootstrap</span>
+								<span className="text-3xl text-white">No Code</span>
 							</div>
 						</div>
 					</motion.div>
