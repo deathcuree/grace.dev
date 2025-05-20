@@ -3,7 +3,7 @@ import CountUp from "react-countup";
 import { InView } from "react-intersection-observer";
 import { motion } from "framer-motion";
 import { fadeIn } from "../variants";
-import Image from "../assets/me_laptop.jpeg";
+import Image from "../assets/me_laptop.jpg";
 import { Link } from "react-scroll";
 
 const About = () => {
