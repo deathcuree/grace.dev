@@ -1,6 +1,6 @@
 import React from 'react';
-// link
 import { Link } from 'react-scroll';
+import Button from './Button';
 
 const Header = () => {
   return (
@@ -16,9 +16,7 @@ const Header = () => {
             </div>
           </Link>
           {/* button */}
-          <Link to="contact">
-            <button className="btn btn-sm">Work with me</button>
-          </Link>
+          <Button to="contact" variant="sm">Work with me</Button>
         </div>
       </div>
     </header>

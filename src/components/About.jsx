@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { fadeIn } from "../variants";
 import Image from "../assets/me_laptop.jpg";
 import { Link } from "react-scroll";
+import Button from "./Button";
 
 const About = () => {
 	return (
@@ -30,7 +31,7 @@ const About = () => {
 						<h3 className="h3 mb-4">Full Stack Developer experienced in working with International clients</h3>
 						<p className="mb-4">
 						Experienced full stack developer with a strong background in building dynamic and scalable web applications. Proficient in modern front-end frameworks like React and Angular, and skilled in TypeScript and JavaScript for developing responsive and maintainable user interfaces. On the back end, I work with Node.js and Express.js, and use MongoDB for efficient, document-based data storage.
-						I've also deployed and maintained applications using AWS cloud services, ensuring performance, scalability, and reliability. In addition to custom-coded projects, I’ve created responsive and engaging websites using no-code platforms like WordPress and Framer, enabling rapid delivery without compromising design or functionality. Combining technical versatility with a user-centric mindset, I build full-stack solutions that are both robust and intuitive.
+						I've also deployed and maintained applications using AWS cloud services, ensuring performance, scalability, and reliability. In addition to custom-coded projects, I've created responsive and engaging websites using no-code platforms like WordPress and Framer, enabling rapid delivery without compromising design or functionality. Combining technical versatility with a user-centric mindset, I build full-stack solutions that are both robust and intuitive.
 						</p>
 						{/* stats */}
 						<div className="flex gap-x-6 lg:gap-x-10 mb-4">
@@ -47,9 +48,7 @@ const About = () => {
 						</div>
 
 						<div className="flex gap-x-8 items-center">
-							<Link to="contact">
-								<button className="btn btn-lg">Contact me</button>
-							</Link>
+							<Button to="contact">Contact me</Button>
 							<Link to="project">
 								<p className="text-gradient btn-link">My Portfolio</p>
 							</Link>

@@ -4,6 +4,8 @@ import { fadeIn } from "../variants";
 import Img1 from "../assets/portfolio-img1.png";
 import Img2 from "../assets/portfolio-img2.png";
 import Img3 from "../assets/portfolio-img3.png";
+import { Link } from "react-router-dom";
+import Button from "./Button";
 
 const Project = () => {
 	return (
@@ -24,10 +26,10 @@ const Project = () => {
 								projects driving creative applications of knowledge, and personal ventures exploring
 								different technologies.
 							</p>
-							<button className="btn btn-sm">View all projects.</button>
+							<Button variant="sm">View all projects</Button>
 						</div>
 						{/* image 1 */}
-						<div className="group relative overflow-hidden border-2 border-white/50 rounded-xl">
+						<Link to="/project/personal-portfolio" className="group relative overflow-hidden border-2 border-white/50 rounded-xl">
 							{/* overlay */}
 							<div className="group-hover:bg-black/70 w-full h-full absolute z-40 transition-all duration-300"></div>
 							{/* img */}
@@ -41,10 +43,11 @@ const Project = () => {
 								<span className="text-gradient">Personal Portfolio</span>
 							</div>
 							{/* title */}
-							<div className="absolute -bottom-full left-12 group-hover:bottom-14 transition-all duration-700 z-50">
+							<div className="absolute -bottom-full left-12 group-hover:bottom-10 transition-all duration-700 z-50">
 								<span className="text-3xl text-white">No Code</span>
+								<p className="text-sm">Personal Project</p>
 							</div>
-						</div>
+						</Link>
 					</motion.div>
 					<motion.div
 						variants={fadeIn("left", 0.2)}
@@ -53,7 +56,7 @@ const Project = () => {
 						viewport={{ once: false, amount: 0.3 }}
 						className="flex-1 flex flex-col gap-y-10">
 						{/* image 2 */}
-						<div className="group relative overflow-hidden border-2 border-white/50 rounded-xl">
+						<Link to="/project/she-time-tracker" className="group relative overflow-hidden border-2 border-white/50 rounded-xl">
 							{/* overlay */}
 							<div className="group-hover:bg-black/70 w-full h-full absolute z-40 transition-all duration-300"></div>
 							{/* img */}
@@ -64,16 +67,16 @@ const Project = () => {
 							/>
 							{/* pretitle */}
 							<div className="absolute -bottom-full left-12 group-hover:bottom-24 transition-all duration-500 z-50">
-								<span className="text-gradient">MERN Stack</span>
+								<span className="text-gradient">SHE Time Tracker</span>
 							</div>
 							{/* title */}
 							<div className="absolute -bottom-full left-12 group-hover:bottom-10 transition-all duration-700 z-50">
-								<span className="text-3xl text-white">Mern Stack Application</span>
-								<p className="text-sm">In progress</p>
+								<span className="text-3xl text-white">Full Stack Application</span>
+								<p className="text-sm">Personal Project</p>
 							</div>
-						</div>
+						</Link>
 						{/* image 3 */}
-						<div className="group relative overflow-hidden border-2 border-white/50 rounded-xl">
+						<Link to="/project/rental-management" className="group relative overflow-hidden border-2 border-white/50 rounded-xl">
 							{/* overlay */}
 							<div className="group-hover:bg-black/70 w-full h-full absolute z-40 transition-all duration-300"></div>
 							{/* img */}
@@ -87,11 +90,12 @@ const Project = () => {
 								<span className="text-gradient">Rental Management System</span>
 							</div>
 							{/* title */}
-							<div className="absolute -bottom-full left-12 group-hover:bottom-14 transition-all duration-700 z-50">
+							<div className="absolute -bottom-full left-12 group-hover:bottom-10 transition-all duration-700 z-50">
 								<span className="text-3xl text-white">Jahnai Boarding Home</span>
 								<p className="text-sm">HTML, Bootstrap, PHP, MySql</p>
+								<p className="text-sm">Personal Project</p>
 							</div>
-						</div>
+						</Link>
 					</motion.div>
 				</div>
 			</div>
