@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { fadeIn } from "../variants";
 import { Link } from "react-scroll";
 import Icons from "./Icons";
+import Button from "./Button";
 
 const Banner = () => {
 	return (
@@ -19,7 +20,7 @@ const Banner = () => {
 							initial="hidden"
 							whileInView={"show"}
 							viewport={{ once: false, amount: 0.7 }}
-							className=" text-[55px] font-bold leading-[0.8] lg:text-[110px]">
+							className="text-[55px] font-bold leading-[0.8] lg:text-[110px]">
 							GRACE <span>ANDAYA</span>
 						</motion.h1>
 						{/* expertise */}
@@ -53,9 +54,7 @@ const Banner = () => {
 							whileInView={"show"}
 							viewport={{ once: false, amount: 0.7 }}
 							className="flex max-w-max gap-x-6 items-center mb-12 mx-auto lg:mx-0">
-							<Link to="contact">
-								<button className="btn btn-lg">Contact me</button>
-							</Link>
+							<Button to="contact">Contact me</Button>
 							<Link to="project">
 								<p className="text-gradient btn-link">My Portfolio</p>
 							</Link>
