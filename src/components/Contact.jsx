@@ -1,6 +1,6 @@
-import React, { useState, useRef } from "react";
+import { useState, useRef } from "react";
 import { motion } from "framer-motion";
-import { FaGithub, FaFacebook, FaInstagram } from "react-icons/fa";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { fadeIn } from "../variants";
 import emailjs from "@emailjs/browser";
 import { Formik, Field } from "formik";
@@ -52,11 +52,8 @@ const Contact = () => {
 								<a href="https://github.com/deathcuree" aria-label="Github link">
 									<FaGithub />
 								</a>
-								<a href="https://www.facebook.com/deathcureee/" aria-label="Facebook link">
-									<FaFacebook />
-								</a>
-								<a href="https://www.instagram.com/deathcureeee/" aria-label="Instagram link">
-									<FaInstagram />
+								<a href="https://www.linkedin.com/in/graceandaya/" aria-label="Facebook link">
+									<FaLinkedin />
 								</a>
 							</div>
 						</div>
