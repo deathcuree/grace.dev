@@ -1,8 +1,8 @@
-import React from "react";
 import { motion } from "framer-motion";
 import { fadeIn } from "../variants";
 import Img1 from "../assets/portfolio-img1.png";
 import Img2 from "../assets/portfolio-img2.png";
+// eslint-disable-next-line 
 import Img3 from "../assets/portfolio-img3.png";
 import { Link } from "react-router-dom";
 import Button from "./Button";
@@ -76,26 +76,26 @@ const Project = () => {
 							</div>
 						</Link>
 						{/* image 3 */}
-						<Link to="/project/rental-management" className="group relative overflow-hidden border-2 border-white/50 rounded-xl">
-							{/* overlay */}
+						{/* <Link to="/project/rental-management" className="group relative overflow-hidden border-2 border-white/50 rounded-xl"> */}
+							{/* overlay
 							<div className="group-hover:bg-black/70 w-full h-full absolute z-40 transition-all duration-300"></div>
 							{/* img */}
-							<img
+							{/* <img
 								className="group-hover:scale-125 transition-all duration-500"
 								src={Img3}
 								alt="project3"
-							/>
+							/> */}
 							{/* pretitle */}
-							<div className="absolute -bottom-full left-12 group-hover:bottom-28 transition-all duration-500 z-50">
+							{/* <div className="absolute -bottom-full left-12 group-hover:bottom-28 transition-all duration-500 z-50">
 								<span className="text-gradient">Rental Management System</span>
-							</div>
+							</div> */}
 							{/* title */}
-							<div className="absolute -bottom-full left-12 group-hover:bottom-10 transition-all duration-700 z-50">
+							{/* <div className="absolute -bottom-full left-12 group-hover:bottom-10 transition-all duration-700 z-50">
 								<span className="text-3xl text-white">Jahnai Boarding Home</span>
 								<p className="text-sm">HTML, Bootstrap, PHP, MySql</p>
 								<p className="text-sm">Personal Project</p>
-							</div>
-						</Link>
+							</div> */}
+						{/* </Link> */}
 					</motion.div>
 				</div>
 			</div>
