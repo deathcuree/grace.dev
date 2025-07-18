@@ -1,15 +1,15 @@
 import React from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { fadeIn } from '../variants';
 import Header from './Header';
-import Nav from './Nav';
 import Button from './Button';
 import projectsData from '../data/projectsData';
 
 const ProjectDetail = () => {
   const { projectId } = useParams();
   const project = projectsData[projectId];
+  const navigate = useNavigate();
 
   if (!project) {
     return <div>Project not found</div>;
@@ -94,7 +94,7 @@ const ProjectDetail = () => {
                 </Button>
                 <Button
                   variant="sm"
-                  routerLink="/"
+                  onClick={() => navigate('/', { state: { scrollTo: 'project' } })}
                 >
                   Back to Projects
                 </Button>
@@ -103,7 +103,6 @@ const ProjectDetail = () => {
           </motion.div>
         </div>
       </section>
-      <Nav />
     </div>
   );
 };

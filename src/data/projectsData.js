@@ -19,7 +19,7 @@ const projectsData = {
     category: 'Full Stack Application',
     image: require('../assets/project-2.png'),
     description: 'A comprehensive time tracking solution for managing work hours and paid time off tracking.',
-    technologies: ['React', 'Node.js', 'MongoDB', 'Express', 'AWS'],
+    technologies: ['React', 'Tailwind', 'Node.js', 'MongoDB', 'Express', 'AWS Serverless', 'AWS Lambda'],
     features: [
       'Time tracking',
       'Project management',
@@ -27,6 +27,23 @@ const projectsData = {
     ],
     liveUrl: 'https://time-tracker-delta-ashen.vercel.app/',
     githubUrl: 'https://github.com/deathcuree/time-tracker'
+  },
+  'jobflow24': {
+    title: 'JobFlow24.com',
+    category: 'WordPress Website',
+    image: require('../assets/portfolio-img3.png'),
+    description: 'A modern job board platform built with WordPress, featuring custom plugins, AI-powered job creation, and advanced search/filtering for job seekers and employers.',
+    technologies: ['WordPress', 'Custom Plugins', 'AI Integration', 'PHP', 'JavaScript', 'Python', 'CSS', 'SEO'],
+    features: [
+      'AI-powered job creation',
+      'Custom WordPress plugins',
+      'Advanced job search and filtering',
+      'Responsive design',
+      'Employer and job seeker dashboards',
+      'Automated job posting workflows'
+    ],
+    liveUrl: 'https://www.jobflow24.com/',
+    githubUrl: 'https://github.com/deathcuree'
   },
   // 'rental-management': {
   //   title: 'Rental Management System',
