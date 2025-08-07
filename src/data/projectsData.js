@@ -1,7 +1,7 @@
 const projectsData = {
   'personal-portfolio': {
     title: 'SHE Virtual Assistance Website',
-    category: 'No Code',
+    category: 'Built in Framer.website',
     image: require('../assets/project-1.png'),
     description: 'A startup company website built with Framer.website',
     technologies: ['Framer.website', 'Framer Motion'],
@@ -12,7 +12,6 @@ const projectsData = {
       'Contact form'
     ],
     liveUrl: 'https://shevirtualassistance.framer.website/',
-    githubUrl: 'https://shevirtualassistance.framer.website/'
   },
   'she-time-tracker': {
     title: 'SHE Time Tracker',
@@ -32,7 +31,6 @@ const projectsData = {
       'Admin dashboard for user management',
     ],
     liveUrl: 'https://time-tracker-delta-ashen.vercel.app/',
-    githubUrl: 'https://github.com/deathcuree/time-tracker'
   },
   'jobflow24': {
     title: 'JobFlow24.com',
@@ -49,8 +47,44 @@ const projectsData = {
       'Automated job posting workflows'
     ],
     liveUrl: 'https://www.jobflow24.com/',
-    githubUrl: 'https://github.com/deathcuree'
   },
+  'bidsnbuys': {
+    title: 'bidsnbuys.com',
+    category: 'E-commerce Website',
+    image: require('../assets/portfolio-img4.png'),
+    description: 'bidsnbuys.com is an auction-style e‑commerce marketplace built with a frontend in Angular and a backend powered by AWS Serverless (Lambda, API Gateway, DynamoDB). Sellers list items and services, while buyers place bids or purchase outright. The platform features AI‑assisted listings, real‑time bidding updates via WebSocket, sophisticated filtering and search tools, responsive dashboards for users, and serverless automation workflows for listing management and payment handling. I contributed to this project from internship up unto a junior developer, assisting in building UI components and integrating core features during its early development phase.',
+    technologies: ['Angular', 'PrimeNG', 'TypeScript', 'Node.js', 'Express', 'AWS Serverless', 'AWS Lambda', 'AWS API Gateway', 'MongoDB', 'AI Integration', 'AWS S3', 'AWS CloudWatch', 'AWS Step Functions / EventBridge', 'WebSocket', 'AI Integration', 'PayMongo Integration', 'Responsive Design', 'Jira'],
+    features: [
+      'Auction-style bidding system',
+      'AI-assisted product and service listings',
+      'Real-time bid updates and notifications',
+      'Advanced filtering and category search',
+      'Responsive dashboards for buyers and sellers',
+      'Serverless backend with scalable AWS architecture',
+      'Secure payment integration via PayMongo',
+      'Image and file uploads via AWS S3',
+      'Automated workflows for listing and bidding',
+      'Mobile-friendly and responsive design'
+    ],
+    liveUrl: 'https://bidsnbuys.com/',
+  },
+  'island-eats': {
+    title: 'Island Eats',
+    category: 'Food Delivery Platform',
+    image: require('../assets/portfolio-img5.png'),
+    description: 'Island Eats is a food delivery platform currently under development, built with React, TypeScript, and a Node.js/Express backend. The platform aims to connect local food vendors with customers through real-time order tracking and vendor dashboards. I contributed to the project during its early development phase through a third-party arrangement, assisting with backend logic, API integration, and UI tasks. We used Jira for collaboration',
+    technologies: ['React', 'TypeScript', 'Ant Design', 'Node.js', 'Express', 'MongoDB', 'WebSocket', 'Responsive Design', 'Jira'],
+    features: [
+      'Vendor and customer dashboards',
+      'Real-time order status updates',
+      'Food item listings with category filtering',
+      'Secure checkout and payment integration',
+      'Mobile-first responsive design',
+      'Scalable AWS serverless architecture',
+      'Ongoing feature development and deployment'
+    ],
+    liveUrl: 'https://development.charitycoders.org/',
+  }
   // 'rental-management': {
   //   title: 'Rental Management System',
   //   category: 'Jahnai Boarding Home',

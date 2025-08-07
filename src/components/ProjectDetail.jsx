@@ -84,14 +84,14 @@ const ProjectDetail = () => {
                 >
                   View Live Site
                 </Button>
-                <Button
+                {/* <Button
                   variant="sm"
                   href={project.githubUrl}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   View Source Code
-                </Button>
+                </Button> */}
                 <Button
                   variant="sm"
                   onClick={() => navigate('/', { state: { scrollTo: 'project' } })}
