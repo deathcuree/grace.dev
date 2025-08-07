@@ -3,6 +3,8 @@ import { fadeIn } from "../variants";
 import Img1 from "../assets/portfolio-img1.png";
 import Img2 from "../assets/portfolio-img2.png";
 import Img3 from "../assets/portfolio-img3.png";
+import Img4 from "../assets/portfolio-img4.png";
+import Img5 from "../assets/portfolio-img5.png";
 import { Link } from "react-router-dom";
 
 const projects = [
@@ -10,7 +12,7 @@ const projects = [
     to: "/project/personal-portfolio",
     img: Img1,
     pretitle: "SHE Virtual Assistance",
-    title: "No Code",
+    title: "Framer Website",
     subtitle: "Business Project",
   },
   {
@@ -24,7 +26,21 @@ const projects = [
     to: "/project/jobflow24",
     img: Img3,
     pretitle: "Job Board",
-    title: "WordPress",
+    title: "WordPress Website",
+    subtitle: "Business Project",
+  },
+  {
+    to: "/project/bidsnbuys",
+    img: Img4,
+    pretitle: "Bids N Buys",
+    title: "E-commerce Website",
+    subtitle: "Business Project",
+  },
+  {
+    to: "/project/island-eats",
+    img: Img5,
+    pretitle: "Island Eats",
+    title: "Delivery Website",
     subtitle: "Business Project",
   },
 ];

@@ -41,8 +41,8 @@ const About = () => {
 							</div>
 							<div className="flex">
 								<div className="text-[40px] font-tertiary text-gradient mb-2">
-									{InView ? <CountUp start={0} end={1} duration={3} /> : null}
-									<div className="font-primary text-sm tracking-[2px]">year of experience</div>
+									{InView ? <CountUp start={0} end={2} duration={3} /> : null}
+									<div className="font-primary text-sm tracking-[2px]">years of experience</div>
 								</div>
 							</div>
 						</div>
