@@ -22,7 +22,7 @@ const projectsData = {
     technologies: ['React', 'Tailwind', 'Node.js', 'MongoDB', 'Express', 'AWS Serverless', 'AWS Lambda'],
     features: [
       'Responsive design',
-      'Time tracking',
+      'Time tracking management',
       'Project management',
       'Report generation',
       'PTO tracking',
