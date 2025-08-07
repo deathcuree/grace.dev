@@ -21,9 +21,15 @@ const projectsData = {
     description: 'A comprehensive time tracking solution for managing work hours and paid time off tracking.',
     technologies: ['React', 'Tailwind', 'Node.js', 'MongoDB', 'Express', 'AWS Serverless', 'AWS Lambda'],
     features: [
+      'Responsive design',
       'Time tracking',
       'Project management',
-      'Report generation'
+      'Report generation',
+      'PTO tracking',
+      'PTO request management',
+      'User authentication',
+      'User roles and permissions',
+      'Admin dashboard for user management',
     ],
     liveUrl: 'https://time-tracker-delta-ashen.vercel.app/',
     githubUrl: 'https://github.com/deathcuree/time-tracker'
