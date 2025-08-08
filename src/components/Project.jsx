@@ -6,6 +6,8 @@ import Img3 from "../assets/portfolio-img3.png";
 import Img4 from "../assets/portfolio-img4.png";
 import Img5 from "../assets/portfolio-img5.png";
 import { Link } from "react-router-dom";
+import Button from './Button';
+import resumePdf from '../assets/Andaya_FullStackDeveloper.pdf';
 
 const projects = [
   {
@@ -92,6 +94,7 @@ const Project = () => {
             projects driving creative applications of knowledge, and personal ventures exploring
             different technologies.
           </p>
+          <Button href={resumePdf} variant="sm" download="Andaya_FullStackDeveloper.pdf">Download Resume</Button>
         </motion.div>
         {/* Projects grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
