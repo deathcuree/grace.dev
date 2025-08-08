@@ -9,7 +9,7 @@ Welcome to my portfolio project! This is a modern, responsive personal portfolio
 - **Responsive Design**: Fully responsive layout that works seamlessly across desktop, tablet, and mobile devices
 - **Modern UI/UX**: Clean and intuitive user interface with smooth animations and transitions
 - **Technology Stack**:
-  - **Frontend**: React.js with TypeScript
+  - **Frontend**: React 18 (JavaScript) via Vite
   - **Styling**: Tailwind CSS for modern, utility-first styling
   - **Build Tool**: Vite for fast development and optimized production builds
   - **Deployment**: Hosted on [Your Hosting Platform]
@@ -37,13 +37,14 @@ To get a local copy up and running, follow these steps:
 
 ### Prerequisites
 
-- Node.js (v16.0.0 or higher)
-- npm (v7.0.0 or higher)
+- Node.js 22.x LTS
+- npm >= 9 (npm 10+ recommended)
 
-You can check your versions by running:
+Use nvm to match the project version:
 ```bash
-node --version
-npm --version
+nvm use
+node -v
+npm -v
 ```
 
 ### Installation
