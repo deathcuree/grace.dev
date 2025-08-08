@@ -1,4 +1,3 @@
-import React from "react";
 import solo_picture from "../assets/solo_picture.png";
 import { TypeAnimation } from "react-type-animation";
 import { motion } from "framer-motion";

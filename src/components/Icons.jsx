@@ -1,4 +1,3 @@
-import React from "react";
 import { DiHtml5 } from "react-icons/di";
 import { IoLogoCss3 } from "react-icons/io";
 import { FaBootstrap, FaReact, FaPhp, FaLaravel, FaAngular, FaAws } from "react-icons/fa";
