@@ -1,8 +1,14 @@
+import project1 from '../assets/project-1.png';
+import project2 from '../assets/project-2.png';
+import portfolio3 from '../assets/portfolio-img3.png';
+import portfolio4 from '../assets/portfolio-img4.png';
+import portfolio5 from '../assets/portfolio-img5.png';
+
 const projectsData = {
   'personal-portfolio': {
     title: 'SHE Virtual Assistance Website',
     category: 'Built in Framer.website',
-    image: require('../assets/project-1.png'),
+    image: project1,
     description: 'A startup company website built with Framer.website',
     technologies: ['Framer.website', 'Framer Motion'],
     features: [
@@ -16,7 +22,7 @@ const projectsData = {
   'she-time-tracker': {
     title: 'SHE Time Tracker',
     category: 'Full Stack Application',
-    image: require('../assets/project-2.png'),
+    image: project2,
     description: 'A comprehensive time tracking solution for managing work hours and paid time off tracking.',
     technologies: ['React', 'Tailwind', 'Node.js', 'MongoDB', 'Express', 'AWS Serverless', 'AWS Lambda'],
     features: [
@@ -35,7 +41,7 @@ const projectsData = {
   'jobflow24': {
     title: 'JobFlow24.com',
     category: 'WordPress Website',
-    image: require('../assets/portfolio-img3.png'),
+    image: portfolio3,
     description: 'A modern job board platform built with WordPress, featuring custom plugins, AI-powered job creation, and advanced search/filtering for job seekers and employers.',
     technologies: ['WordPress', 'Custom Plugins', 'AI Integration', 'PHP', 'JavaScript', 'Python', 'CSS', 'SEO'],
     features: [
@@ -51,7 +57,7 @@ const projectsData = {
   'bidsnbuys': {
     title: 'bidsnbuys.com',
     category: 'E-commerce Website',
-    image: require('../assets/portfolio-img4.png'),
+    image: portfolio4,
     description: 'bidsnbuys.com is an auction-style e‑commerce marketplace built with a frontend in Angular and a backend powered by AWS Serverless (Lambda, API Gateway, DynamoDB). Sellers list items and services, while buyers place bids or purchase outright. The platform features AI‑assisted listings, real‑time bidding updates via WebSocket, sophisticated filtering and search tools, responsive dashboards for users, and serverless automation workflows for listing management and payment handling. I contributed to this project from internship up unto a junior developer, assisting in building UI components and integrating core features during its early development phase.',
     technologies: ['Angular', 'PrimeNG', 'TypeScript', 'Node.js', 'Express', 'AWS Serverless', 'AWS Lambda', 'AWS API Gateway', 'MongoDB', 'AI Integration', 'AWS S3', 'AWS CloudWatch', 'AWS Step Functions / EventBridge', 'WebSocket', 'AI Integration', 'PayMongo Integration', 'Responsive Design', 'Jira'],
     features: [
@@ -71,7 +77,7 @@ const projectsData = {
   'island-eats': {
     title: 'Island Eats',
     category: 'Food Delivery Platform',
-    image: require('../assets/portfolio-img5.png'),
+    image: portfolio5,
     description: 'Island Eats is a food delivery platform currently under development, built with React, TypeScript, and a Node.js/Express backend. The platform aims to connect local food vendors with customers through real-time order tracking and vendor dashboards. I contributed to the project during its early development phase through a third-party arrangement, assisting with backend logic, API integration, and UI tasks. We used Jira for collaboration',
     technologies: ['React', 'TypeScript', 'Ant Design', 'Node.js', 'Express', 'MongoDB', 'WebSocket', 'Responsive Design', 'Jira'],
     features: [
@@ -102,4 +108,4 @@ const projectsData = {
   // }
 };
 
-export default projectsData; 
+export default projectsData;
