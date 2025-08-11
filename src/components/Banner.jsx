@@ -55,7 +55,7 @@ const Banner = () => {
 							className="flex max-w-max gap-x-6 items-center mb-12 mx-auto lg:mx-0">
 							<Button to="contact">Contact me</Button>
 							<Link to="project">
-								<p className="text-gradient btn-link">My Portfolio</p>
+								<p className="text-gradient btn-link">My Projects</p>
 							</Link>
 						</motion.div>
 						{/* socials */}
