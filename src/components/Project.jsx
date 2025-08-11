@@ -5,6 +5,7 @@ import Img2 from "../assets/portfolio-img2.png";
 import Img3 from "../assets/portfolio-img3.png";
 import Img4 from "../assets/portfolio-img4.png";
 import Img5 from "../assets/portfolio-img5.png";
+import Img6 from "../assets/portfolio-img6.png";
 import { Link } from "react-router-dom";
 import Button from './Button';
 import resumePdf from '../assets/Andaya_FullStackDeveloper.pdf';
@@ -43,6 +44,13 @@ const projects = [
     img: Img5,
     pretitle: "Island Eats",
     title: "Delivery Website",
+    subtitle: "Business Project",
+  },
+  {
+    to: "/project/create-job-ai",
+    img: Img6,
+    pretitle: "Create Jobs using AI",
+    title: "AI Job Creation Tool",
     subtitle: "Business Project",
   },
 ];
