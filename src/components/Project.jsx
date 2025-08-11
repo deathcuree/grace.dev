@@ -6,6 +6,7 @@ import Img3 from "../assets/portfolio-img3.png";
 import Img4 from "../assets/portfolio-img4.png";
 import Img5 from "../assets/portfolio-img5.png";
 import Img6 from "../assets/portfolio-img6.png";
+import Img7 from "../assets/portfolio-img7.png";
 import { Link } from "react-router-dom";
 import Button from './Button';
 import resumePdf from '../assets/Andaya_FullStackDeveloper.pdf';
@@ -53,6 +54,13 @@ const projects = [
     title: "AI Job Creation Tool",
     subtitle: "Business Project",
   },
+  {
+    to: "/project/csv-importer",
+    img: Img7,
+    pretitle: "Import Jobs from CSV",
+    title: "CSV Importer Tool",
+    subtitle: "Business Project",
+  },
 ];
 
 const ProjectCard = ({ to, img, pretitle, title, subtitle, delay }) => (
@@ -98,9 +106,7 @@ const Project = () => {
         >
           <h2 className="h2 leading-tight text-accent">My projects.</h2>
           <p className="max-w-xl mb-8">
-            I've assembled a varied range of projects, these include projects from personal, business, work
-            projects driving creative applications of knowledge, and personal ventures exploring
-            different technologies.
+           I’ve assembled a diverse portfolio showcasing personal projects, client work, and professional collaborations. These range from business-focused tools to creative applications of technology, each reflecting my ability to adapt knowledge across different industries and technical stacks.
           </p>
           <Button href={resumePdf} variant="sm" download="Andaya_FullStackDeveloper.pdf">Download Resume</Button>
         </motion.div>

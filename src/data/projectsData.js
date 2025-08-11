@@ -2,6 +2,7 @@ import project1 from '../assets/project-1.png';
 import project2 from '../assets/project-2.png';
 import project3 from '../assets/project-3.png';
 import project6 from '../assets/project-6.png';
+import project7 from '../assets/project-7.png';
 import portfolio4 from '../assets/portfolio-img4.png';
 import portfolio5 from '../assets/portfolio-img5.png';
 
@@ -96,10 +97,21 @@ const projectsData = {
     title: 'Create Jobs using AI',
     category: 'AI Job Creation Tool',
     image: project6,
-    description: 'A custom AI-powered job creation tool that integrates with WordPress to automatically generate and format job postings based on predefined templates. Built using PHP, JavaScript, and CSS, the system leverages AI to produce high-demand, high-salary job descriptions and seamlessly publish them to a WordPress site. Designed for efficiency, it reduces manual posting time, ensures consistent formatting, and adapts content to current market trends. Live demo currently unavailable due to hosting limits, code available upon request',
+    description: 'A custom AI-powered job creation tool that integrates with WordPress to automatically generate and format job postings based on predefined templates. Built using PHP, JavaScript, and CSS, the system leverages AI to produce high-demand, high-salary job descriptions and seamlessly publish them to a WordPress site. Designed for efficiency, it reduces manual posting time, ensures consistent formatting, and adapts content to current market trends. Live demo and code requests are confidential.',
     technologies: ['Python', 'FastAPI', 'Custom WordPress Plugin', 'AI Integration', 'PHP', 'JavaScript', 'CSS'],
     features: [
       'AI-powered job creation',
+    ],
+    liveUrl: '',
+  },
+  'csv-importer': {
+    title: 'CSV Importer Tool',
+    category: 'Spreadsheet Import Tool',
+    image: project7,
+    description: 'A custom-built WordPress plugin that streamlines job posting management by importing listings directly from CSV files. Developed with PHP, JavaScript, and CSS, the tool parses spreadsheet data, maps fields to WordPress post structures, and publishes the jobs in bulk with minimal manual input. Designed for confidential datasets, it ensures secure handling of information and supports customizable field mapping to adapt to various CSV formats.',
+    technologies: ['Custom WordPress Plugin', 'PHP', 'JavaScript', 'CSS'],
+    features: [
+      'Import jobs from CSV file',
     ],
     liveUrl: '',
   },
