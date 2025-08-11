@@ -8,6 +8,7 @@ import ProjectDetail from './components/ProjectDetail';
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import { scroller } from 'react-scroll';
+import { Toaster } from 'react-hot-toast';
 
 const ScrollToSection = () => {
   const location = useLocation();
@@ -39,6 +40,7 @@ const Home = () => (
 const App = () => {
   return (
     <Router>
+      <Toaster position="top-right" />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/project/:projectId" element={<ProjectDetail />} />

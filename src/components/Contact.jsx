@@ -5,6 +5,7 @@ import { fadeIn } from "../variants";
 import emailjs from "@emailjs/browser";
 import { Formik, Field } from "formik";
 import * as Yup from "yup";
+import { toast } from "react-hot-toast";
 
 const Contact = () => {
 	const [isMessageSent, setMessageSent] = useState(false);
@@ -17,16 +18,17 @@ const Contact = () => {
 			.required("Message is required"),
 	});
 
-	const sendEmail = (values, { setSubmitting }) => {
-		emailjs.sendForm("service_i32c2x9", "template_mp7e5kw", form.current, "0vtYT_Ua2JEL8XA8r").then(
+	const sendEmail = (values, { setSubmitting, resetForm }) => {
+		const loadingId = toast.loading("Sending...");
+		emailjs.sendForm(import.meta.env.VITE_EMAILJS_SERVICE_ID, import.meta.env.VITE_EMAILJS_TEMPLATE_ID, form.current, import.meta.env.VITE_EMAILJS_PUBLIC_KEY).then(
 			(result) => {
-				console.log(result.text);
-				console.log("message sent");
 				setMessageSent(true);
+				toast.success("Your message has been sent!", { id: loadingId });
+				resetForm();
 				setSubmitting(false);
 			},
 			(error) => {
-				console.log(error.text);
+				toast.error("Failed to send message. Please try again.", { id: loadingId });
 				setSubmitting(false);
 			},
 		);
@@ -67,7 +69,7 @@ const Contact = () => {
 						}}
 						validationSchema={validationSchema}
 						onSubmit={sendEmail}>
-						{({ handleSubmit }) => (
+						{({ handleSubmit, isSubmitting }) => (
 							<motion.form
 								variants={fadeIn("left", 0.3)}
 								initial="hidden"
@@ -130,8 +132,13 @@ const Contact = () => {
 									)}
 								</Field>
 
-								<button className="btn btn-lg" type="submit" value="sendEmail">
-									Send message
+								<button
+									className="btn btn-lg disabled:opacity-60 disabled:cursor-not-allowed"
+									type="submit"
+									value="sendEmail"
+									disabled={isSubmitting}
+									aria-busy={isSubmitting}>
+									{isSubmitting ? "Sending..." : "Send message"}
 								</button>
 
 								{isMessageSent && (
