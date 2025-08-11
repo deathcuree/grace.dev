@@ -1,6 +1,7 @@
 import project1 from '../assets/project-1.png';
 import project2 from '../assets/project-2.png';
-import portfolio3 from '../assets/portfolio-img3.png';
+import project3 from '../assets/project-3.png';
+import project6 from '../assets/project-6.png';
 import portfolio4 from '../assets/portfolio-img4.png';
 import portfolio5 from '../assets/portfolio-img5.png';
 
@@ -41,7 +42,7 @@ const projectsData = {
   'jobflow24': {
     title: 'JobFlow24.com',
     category: 'WordPress Website',
-    image: portfolio3,
+    image: project3,
     description: 'A modern job board platform built with WordPress, featuring custom plugins, AI-powered job creation, and advanced search/filtering for job seekers and employers.',
     technologies: ['WordPress', 'Custom Plugins', 'AI Integration', 'PHP', 'JavaScript', 'Python', 'CSS', 'SEO'],
     features: [
@@ -90,7 +91,18 @@ const projectsData = {
       'Ongoing feature development and deployment'
     ],
     liveUrl: 'https://development.charitycoders.org/',
-  }
+  },
+  'create-job-ai': {
+    title: 'Create Jobs using AI',
+    category: 'AI Job Creation Tool',
+    image: project6,
+    description: 'A custom AI-powered job creation tool that integrates with WordPress to automatically generate and format job postings based on predefined templates. Built using PHP, JavaScript, and CSS, the system leverages AI to produce high-demand, high-salary job descriptions and seamlessly publish them to a WordPress site. Designed for efficiency, it reduces manual posting time, ensures consistent formatting, and adapts content to current market trends. Live demo currently unavailable due to hosting limits, code available upon request',
+    technologies: ['Python', 'FastAPI', 'Custom WordPress Plugin', 'AI Integration', 'PHP', 'JavaScript', 'CSS'],
+    features: [
+      'AI-powered job creation',
+    ],
+    liveUrl: '',
+  },
   // 'rental-management': {
   //   title: 'Rental Management System',
   //   category: 'Jahnai Boarding Home',
