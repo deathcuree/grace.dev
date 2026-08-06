@@ -1,62 +1,64 @@
 {
-  "name": "portfolio",
-  "version": "0.2.0",
-  "private": true,
-  "engines": {
-    "node": ">=20 <23",
-    "npm": ">=9"
-  },
-  "scripts": {
-    "dev": "vite",
-    "start": "vite",
-    "build": "vite build",
-    "preview": "vite preview",
-    "test": "vitest --run --passWithNoTests"
-  },
-  "dependencies": {
-    "@emailjs/browser": "^3.11.0",
-    "@testing-library/jest-dom": "^5.16.5",
-    "@testing-library/react": "^13.4.0",
-    "@testing-library/user-event": "^13.5.0",
-    "formik": "^2.4.5",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-hot-toast": "^2.5.2",
-    "react-router-dom": "^7.6.2",
-    "web-vitals": "^2.1.4",
-    "yup": "^1.3.3"
-  },
-  "devDependencies": {
-    "@types/react-type-animation": "^1.1.4",
-    "@vitejs/plugin-react": "^4.3.0",
-    "autoprefixer": "^10.4.19",
-    "framer-motion": "^8.4.3",
-    "jsdom": "^24.0.0",
-    "postcss": "^8.4.39",
-    "react-countup": "^6.4.0",
-    "react-icons": "^4.7.1",
-    "react-intersection-observer": "^9.4.1",
-    "react-scroll": "^1.8.9",
-    "react-type-animation": "^3.2.0",
-    "tailwindcss": "^3.4.4",
-    "typescript": "^4.9.5",
-    "vite": "^5.4.0",
-    "vitest": "^2.0.0"
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  },
-  "vitest": {
-    "environment": "jsdom",
-    "setupFiles": "./src/setupTests.js"
-  }
+	"name": "portfolio",
+	"version": "0.3.0",
+	"private": true,
+	"type": "module",
+	"author": "Grace Andaya <nikaandaya21@gmail.com>",
+	"engines": {
+		"node": ">=24",
+		"npm": ">=9"
+	},
+	"scripts": {
+		"dev": "vite",
+		"start": "vite",
+		"typecheck": "tsc --noEmit",
+		"build": "tsc --noEmit && vite build",
+		"preview": "vite preview",
+		"test": "vitest --run --passWithNoTests",
+		"clean": "rm -rf node_modules package-lock.json"
+	},
+	"dependencies": {
+		"@emailjs/browser": "^3.11.0",
+		"@fontsource/instrument-sans": "^5.3.0",
+		"@testing-library/jest-dom": "^5.16.5",
+		"@testing-library/react": "^13.4.0",
+		"@testing-library/user-event": "^13.5.0",
+		"formik": "^2.4.5",
+		"react": "^18.2.0",
+		"react-dom": "^18.2.0",
+		"react-hot-toast": "^2.5.2",
+		"react-router-dom": "^7.6.2",
+		"yup": "^1.3.3"
+	},
+	"devDependencies": {
+		"@types/node": "^20.19.43",
+		"@types/react": "^18.3.31",
+		"@types/react-dom": "^18.3.7",
+		"@types/react-scroll": "^1.8.10",
+		"@vitejs/plugin-react": "^4.3.0",
+		"autoprefixer": "^10.4.19",
+		"jsdom": "^24.0.0",
+		"postcss": "^8.4.39",
+		"react-scroll": "^1.8.9",
+		"tailwindcss": "^3.4.4",
+		"typescript": "^5.9.3",
+		"vite": "^5.4.0",
+		"vitest": "^2.0.0"
+	},
+	"browserslist": {
+		"production": [
+			">0.2%",
+			"not dead",
+			"not op_mini all"
+		],
+		"development": [
+			"last 1 chrome version",
+			"last 1 firefox version",
+			"last 1 safari version"
+		]
+	},
+	"vitest": {
+		"environment": "jsdom",
+		"setupFiles": "./src/setupTests.ts"
+	}
 }
