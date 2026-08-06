@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <rect width="32" height="32" rx="7" fill="#0A0A0A" />
+  <text
+    x="16"
+    y="17.2"
+    text-anchor="middle"
+    dominant-baseline="middle"
+    font-family="Helvetica Neue, Helvetica, Arial, sans-serif"
+    font-weight="700"
+    font-size="13.5"
+    letter-spacing="-0.3"
+    fill="#FFFFFF"
+  >GA</text>
+</svg>
