@@ -10,7 +10,7 @@ export const STACK: StackGroup[] = [
 	},
 	{
 		label: 'Backend',
-		items: ['Node.js', 'Express.js', 'Python (FastAPI)', 'PHP', 'ASP.NET Web Forms'],
+		items: ['Node.js', 'Nest.js', 'Express.js', 'Python (FastAPI)', 'PHP', 'ASP.NET Web Forms'],
 	},
 	{
 		label: 'Data & caching',

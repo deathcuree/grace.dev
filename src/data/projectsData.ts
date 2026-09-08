@@ -7,6 +7,7 @@ import aiJobCreationTool from "../assets/ai-job-creation-tool.webp";
 import importJobTool from "../assets/import-job-tool.webp";
 import portfolio4 from "../assets/portfolio-img4.webp";
 import portfolio5 from "../assets/portfolio-img5.webp";
+import myKidReports from "../assets/my-kid-reports.webp";
 
 export type ProjectStatus = "live" | "progress" | "archived" | "private";
 
@@ -23,6 +24,33 @@ export interface Project {
 }
 
 const projectsData: Record<string, Project> = {
+	"kid-reports": {
+		title: "Kid Reports",
+		category: "School management platform",
+		status: "live",
+		featured: true,
+		image: myKidReports,
+		description:
+			"A large-scale, multi-role school management ecosystem spanning a web app, marketing website, and mobile app — connecting admins, schools, parents, and students across dashboards, attendance, billing, admissions, and more. Our designer left partway through, so I worked hands-on with the client directly to carry the UI/UX through to shipping.",
+		technologies: ["Next.js", "Nest.js", "MySQL", "AWS"],
+		features: [
+			"Role-based dashboards for admin, school, parent, and student accounts",
+			"My School module for day-to-day school management",
+			"Live activity feed of student updates",
+			"Class schedules and school calendar (school tours, events)",
+			"Student attendance tracking",
+			"In-app communications and chat",
+			"Stripe-powered billing and payments",
+			"Admissions workflow management",
+			"Learning module for coursework and progress",
+			"Marketing and website content management",
+			"Paperwork module with a Jotform-style fillable form builder",
+			"Reporting across school and student activity",
+			"Food program management",
+			"Companion mobile app alongside the web platform",
+		],
+		liveUrl: "https://mykidreports.com/",
+	},
 	"she-time-tracker": {
 		title: "SHE Time Tracker",
 		category: "Internal SaaS tool",
