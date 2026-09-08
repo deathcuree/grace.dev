@@ -1,6 +1,6 @@
 import { Link } from "react-scroll";
 import soloPicture from "../assets/grace.webp";
-import resumePdf from "../assets/Andaya_FullStackEngineer.pdf";
+import resumePdf from "../assets/Andaya_SoftwareEngineer.pdf";
 
 const stats = [
 	{ n: "9", l: "Products shipped" },
@@ -32,7 +32,7 @@ const Hero = () => {
 						<a
 							className="btn"
 							href={resumePdf}
-							download="Andaya_FullStackEngineer.pdf">
+							download="Andaya_SoftwareEngineer.pdf">
 							Download résumé
 						</a>
 					</div>
