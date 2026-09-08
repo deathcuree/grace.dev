@@ -10,7 +10,7 @@ const About = () => {
 					<p className="mb-5 max-w-[50ch] text-[1.05rem] leading-relaxed text-ink-soft">
 						I build scalable web applications with <strong className="font-semibold text-ink">React, Next.js,
 						Angular, and TypeScript</strong>, backed by <strong className="font-semibold text-ink">Node.js,
-						Python/FastAPI</strong>, and legacy ASP.NET Web Forms where needed. I ship serverless on{' '}
+						Nest.js, Python/FastAPI</strong>, and legacy ASP.NET Web Forms where needed. I ship serverless on{' '}
 						<strong className="font-semibold text-ink">AWS Lambda</strong>, manage infrastructure on EC2 and
 						RDS, and wire up REST APIs and WebSockets for real-time features. I also maintain WordPress
 						platforms and CI/CD pipelines with Jenkins, GitHub Actions, and Docker.
