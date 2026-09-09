@@ -3,7 +3,7 @@ import soloPicture from "../assets/grace.webp";
 import resumePdf from "../assets/Andaya_SoftwareEngineer.pdf";
 
 const stats = [
-	{ n: "9", l: "Products shipped" },
+	{ n: "10", l: "Products shipped" },
 	{ n: "2.5+", l: "Years experience" },
 	{ n: "BSIT", l: "Information Technology" },
 ];
