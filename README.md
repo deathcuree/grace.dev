@@ -27,9 +27,9 @@ I am continually working to enhance this portfolio. Here are some of the planned
 - **Projects**: New projects will be added to showcase more of my work
 - **Blog Section**: Adding a technical blog section
 - **Testing**:
-  - Jest and React Testing Library implementation for component testing
+  - Expanded Vitest + React Testing Library component coverage
   - Lighthouse performance optimization
-  - E2E testing with Cypress
+  - Broader Playwright E2E coverage (visual regression, accessibility checks)
 
 ## Getting Started
 
@@ -82,6 +82,32 @@ npm -v
     ```bash
     npm run preview
     ```
+
+## Testing
+
+Unit / component tests run with **Vitest** and end-to-end tests with **Playwright**.
+
+```bash
+# Unit / component tests
+npm test
+
+# E2E tests (starts the dev server automatically)
+npm run test:e2e
+
+# E2E tests with the Playwright UI runner
+npm run test:e2e:ui
+
+# Open the last HTML report
+npm run test:e2e:report
+```
+
+The first E2E run needs browsers installed once:
+
+```bash
+npx playwright install
+```
+
+E2E specs live in [`e2e/`](e2e/) and run on Chromium, Firefox, and WebKit.
 
 ## Contributing
 
