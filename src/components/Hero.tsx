@@ -1,9 +1,9 @@
 import { Link } from "react-scroll";
 import soloPicture from "../assets/grace.webp";
-import resumePdf from "../assets/Andaya_SoftwareEngineer.pdf";
+import resumePdf from "../assets/Andaya_AI_Engineer.pdf";
 
 const stats = [
-	{ n: "10", l: "Products shipped" },
+	{ n: "11", l: "Products shipped" },
 	{ n: "2.5+", l: "Years experience" },
 	{ n: "BSIT", l: "Information Technology" },
 ];
@@ -15,11 +15,11 @@ const Hero = () => {
 			className="py-24 lg:py-28">
 			<div className="wrap grid items-center gap-12 lg:grid-cols-[1.15fr_0.85fr] lg:gap-16">
 				<div>
-					<p className="eyebrow">Full Stack Engineer</p>
+					<p className="eyebrow">AI Engineer · Full Stack Developer</p>
 					<h1 className="mb-6 text-balance text-[2.6rem] font-semibold leading-[1.02] tracking-tight lg:text-[4.6rem]">Grace Andaya</h1>
 					<p className="mb-10 max-w-[46ch] text-[1.1rem] leading-relaxed text-ink-soft lg:text-[1.2rem]">
-						I design and ship full-stack web applications — <strong className="font-semibold text-ink">serverless AWS backends</strong>, React and Next.js front ends,
-						and WordPress platforms — for clients across time zones.
+						I design and ship AI-powered features and full-stack web applications — <strong className="font-semibold text-ink">generative AI integrations</strong>,
+						serverless AWS backends, and React and Next.js front ends — for clients across time zones.
 					</p>
 					<div className="mb-14 flex flex-wrap gap-3.5">
 						<Link
@@ -32,7 +32,7 @@ const Hero = () => {
 						<a
 							className="btn"
 							href={resumePdf}
-							download="Andaya_SoftwareEngineer.pdf">
+							download="Andaya_AI_Engineer.pdf">
 							Download résumé
 						</a>
 					</div>
