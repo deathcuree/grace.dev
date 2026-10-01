@@ -49,7 +49,7 @@ const Projects = () => {
 					<p className="eyebrow">Selected work</p>
 					<h2 className="sec-title mb-3.5">Projects I've shipped.</h2>
 					<p className="text-[1.02rem] text-ink-soft">
-						Nine products across marketplaces, SaaS dashboards, and WordPress platforms — built solo and
+						Eleven products across marketplaces, SaaS dashboards, and WordPress platforms — built solo and
 						alongside engineering teams.
 					</p>
 				</div>
