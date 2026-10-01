@@ -5,6 +5,10 @@ export interface StackGroup {
 
 export const STACK: StackGroup[] = [
 	{
+		label: 'AI & automation',
+		items: ['Generative AI integration', 'FastAPI AI services', 'Prompt engineering', 'Claude Code', 'Agentic workflows'],
+	},
+	{
 		label: 'Frontend',
 		items: ['React', 'Next.js', 'Angular', 'TypeScript', 'JavaScript', 'Tailwind CSS', 'Styled Components', 'Ant Design', 'Bootstrap'],
 	},
