@@ -9,6 +9,7 @@ import portfolio4 from "../assets/portfolio-img4.webp";
 import portfolio5 from "../assets/portfolio-img5.webp";
 import myKidReports from "../assets/my-kid-reports.webp";
 import huntMyself from "../assets/hunt-myself.webp";
+import leadFinder from "../assets/lead-finder.webp";
 
 export type ProjectStatus = "live" | "progress" | "archived" | "private";
 
@@ -51,6 +52,26 @@ const projectsData: Record<string, Project> = {
 			"Companion mobile app alongside the web platform",
 		],
 		liveUrl: "https://mykidreports.com/",
+	},
+	"lead-finder": {
+		title: "Lead Finder",
+		category: "AI lead-finding tool",
+		status: "private",
+		image: leadFinder,
+		description:
+			"A local tool that collects leads every day, scores each one against my profile with Claude Code, drafts a tailored message for the strong ones, and tracks their status in a dashboard. It drafts; I send.",
+		technologies: ["TypeScript", "Node.js", "React", "Claude Code", "SQLite", "Hono", "Tailwind CSS", "shadcn/ui", "Chrome Extension", "Gmail API"],
+		features: [
+			"Daily collection from public feeds, stored once and deduplicated across sources",
+			"Email alerts read from Gmail with read-only OAuth access",
+			"Browser extension that saves the page I have open, for sources without a feed",
+			"AI scoring of each lead against my profile and portfolio, with a written reason and the closest matching projects",
+			"Hard filtering rules applied in code rather than left to the model",
+			"Message drafted for strong leads from my real experience and projects, editable and never sent automatically",
+			"React dashboard with ranked leads, status tracking, and light and dark themes",
+			"Scheduled daily run on macOS, with the result of each run reported in the dashboard",
+			"Built spec-first with agentic Claude Code workflows and covered by offline tests",
+		],
 	},
 	jobflow24: {
 		title: "JobFlow24",
