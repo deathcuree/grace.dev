@@ -8,7 +8,7 @@ test.describe('Home page', () => {
 	test('renders the hero with name and role', async ({ page }) => {
 		await expect(page).toHaveTitle(/Grace Andaya/);
 		await expect(page.getByRole('heading', { level: 1, name: 'Grace Andaya' })).toBeVisible();
-		await expect(page.getByText('Full Stack Engineer', { exact: true })).toBeVisible();
+		await expect(page.getByText('AI Engineer · Full Stack Developer', { exact: true })).toBeVisible();
 	});
 
 	test('shows the hero stats', async ({ page }) => {
@@ -26,7 +26,7 @@ test.describe('Home page', () => {
 
 	test('résumé link points to the PDF and is a download', async ({ page }) => {
 		const link = page.getByRole('link', { name: 'Download résumé' });
-		await expect(link).toHaveAttribute('download', 'Andaya_SoftwareEngineer.pdf');
+		await expect(link).toHaveAttribute('download', 'Andaya_AI_Engineer.pdf');
 		await expect(link).toHaveAttribute('href', /\.pdf$/);
 	});
 });

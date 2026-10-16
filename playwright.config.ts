@@ -31,5 +31,11 @@ export default defineConfig({
 		url: baseURL,
 		reuseExistingServer: !process.env.CI,
 		timeout: 120_000,
+		// Placeholder EmailJS config so the contact form reaches the network, where the tests stub the API.
+		env: {
+			VITE_EMAILJS_SERVICE_ID: 'test-service',
+			VITE_EMAILJS_TEMPLATE_ID: 'test-template',
+			VITE_EMAILJS_PUBLIC_KEY: 'test-public-key',
+		},
 	},
 });

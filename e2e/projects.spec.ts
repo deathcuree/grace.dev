@@ -25,6 +25,28 @@ test.describe('Projects', () => {
 		await expect(live).toHaveAttribute('rel', /noopener/);
 	});
 
+	test('the compliance billing portal links out to its live site in a new tab', async ({ page }) => {
+		await page.goto('/project/compliance-billing-portal');
+		const live = page.getByRole('link', { name: 'View live site' });
+		await expect(live).toHaveAttribute('href', 'https://portal.enviromerica.com/Login.aspx?ReturnUrl=%2f');
+		await expect(live).toHaveAttribute('target', '_blank');
+		await expect(live).toHaveAttribute('rel', /noopener/);
+	});
+
+	test('the compliance training funnel detail page shows its features', async ({ page }) => {
+		await page.goto('/project/compliance-training-funnel');
+		await expect(page.getByRole('heading', { level: 1, name: 'Compliance Training Funnel' })).toBeVisible();
+		await expect(page.getByText('Lessons, quizzes, and certification flow')).toBeVisible();
+	});
+
+	test('the home page lists both compliance projects', async ({ page }) => {
+		await page.goto('/');
+		const section = page.locator('#project');
+		await expect(section.locator('a[href="/project/compliance-training-funnel"]')).toBeVisible();
+		await expect(section.locator('a[href="/project/compliance-billing-portal"]')).toBeVisible();
+		await expect(section.getByText(/Fourteen products/)).toBeVisible();
+	});
+
 	test('an unknown project id shows a not-found message', async ({ page }) => {
 		await page.goto('/project/this-project-does-not-exist');
 		await expect(page.getByText('Project not found.')).toBeVisible();
