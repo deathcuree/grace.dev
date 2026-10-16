@@ -183,11 +183,11 @@ const projectsData: Record<string, Project> = {
 		status: "live",
 		image: nyFulcrumWebsite,
 		description:
-			"Translated Figma designs into a responsive Next.js site for Fulcrum Solutions, backed by Go APIs on AWS Lambda and CMS content workflows for dynamic content delivery.",
-		technologies: ["Next.js", "TypeScript", "Tailwind CSS", "React", "Go", "AWS Lambda"],
+			"Translated Figma designs into a responsive Next.js site for Fulcrum Solutions, backed by Go APIs on AWS Lambda and a Strapi CMS we built for dynamic content delivery, which I later upgraded to the latest Strapi release.",
+		technologies: ["Next.js", "TypeScript", "Tailwind CSS", "React", "Go", "AWS Lambda", "Strapi"],
 		features: [
 			"Responsive components built from Figma designs",
-			"CMS-driven dynamic content delivery",
+			"Strapi CMS for dynamic content delivery, built in-house and upgraded to the latest release",
 			"Backend APIs in Go on AWS Lambda",
 			"Performance-optimized page load across layouts",
 		],
