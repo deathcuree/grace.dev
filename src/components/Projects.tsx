@@ -47,10 +47,10 @@ const Projects = () => {
 			<div className="wrap">
 				<div className="mb-14 max-w-[620px]">
 					<p className="eyebrow">Selected work</p>
-					<h2 className="sec-title mb-3.5">Projects I've shipped.</h2>
+					<h2 className="sec-title mb-3.5">Projects I've worked on.</h2>
 					<p className="text-[1.02rem] text-ink-soft">
-						Fourteen products across marketplaces, SaaS dashboards, AI tools, and WordPress platforms — built solo and
-						alongside engineering teams.
+						Fourteen projects across marketplaces, SaaS dashboards, AI tools, and WordPress platforms — some I built and
+						shipped end to end, others I contributed to on client and team codebases.
 					</p>
 				</div>
 
@@ -83,7 +83,7 @@ const Projects = () => {
 
 const FeaturedProject = ({ id, project }: { id: string; project: Project }) => (
 	<Link to={`/project/${id}`} className="group mb-20 grid items-center gap-11 lg:grid-cols-[1.1fr_0.9fr]">
-		<ProjectMedia project={project} className="aspect-[16/11] rounded-xl" fit="contain" />
+		<ProjectMedia project={project} className="aspect-[4/3] rounded-xl" fit="contain" />
 		<div>
 			<div className="mb-[18px] flex items-center gap-3.5">
 				<StatusBadge status={project.status} />

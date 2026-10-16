@@ -1,4 +1,5 @@
-import { Link } from "react-scroll";
+import { Link } from "react-router-dom";
+import { SECTION_PATHS } from "../constants/sections";
 import soloPicture from "../assets/grace.webp";
 import resumePdf from "../assets/Andaya_AI_Engineer.pdf";
 
@@ -22,11 +23,7 @@ const Hero = () => {
 						serverless AWS backends, and React and Next.js front ends — for clients across time zones.
 					</p>
 					<div className="mb-14 flex flex-wrap gap-3.5">
-						<Link
-							to="project"
-							smooth
-							offset={-80}
-							className="btn btn-solid cursor-pointer">
+						<Link to={SECTION_PATHS.project} className="btn btn-solid">
 							View projects
 						</Link>
 						<a

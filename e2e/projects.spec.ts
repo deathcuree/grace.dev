@@ -44,7 +44,7 @@ test.describe('Projects', () => {
 		const section = page.locator('#project');
 		await expect(section.locator('a[href="/project/compliance-training-funnel"]')).toBeVisible();
 		await expect(section.locator('a[href="/project/compliance-billing-portal"]')).toBeVisible();
-		await expect(section.getByText(/Fourteen products/)).toBeVisible();
+		await expect(section.getByText(/Fourteen projects/)).toBeVisible();
 	});
 
 	test('an unknown project id shows a not-found message', async ({ page }) => {
