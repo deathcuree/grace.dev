@@ -171,12 +171,11 @@ const projectsData: Record<string, Project> = {
 	"island-eats": {
 		title: "Island Eats",
 		category: "Food delivery platform",
-		status: "progress",
+		status: "archived",
 		image: portfolio5,
-		description: "Connects local vendors with customers through live order tracking and vendor dashboards — in active development.",
+		description: "A food delivery platform connecting local vendors with customers through live order tracking and vendor dashboards.",
 		technologies: ["React", "TypeScript", "Ant Design", "Node.js", "Express", "MongoDB", "WebSocket"],
 		features: ["Vendor and customer dashboards", "Real-time order status updates", "Food item listings with category filtering", "Mobile-first responsive design"],
-		liveUrl: "https://development.charitycoders.org/",
 	},
 	"ny-fulcrum": {
 		title: "Fulcrum Solutions",
@@ -184,12 +183,12 @@ const projectsData: Record<string, Project> = {
 		status: "live",
 		image: nyFulcrumWebsite,
 		description:
-			"Translated Figma designs into a responsive Next.js site for Fulcrum Solutions, integrating existing AWS Lambda functions and CMS content workflows for dynamic content delivery.",
-		technologies: ["Next.js", "TypeScript", "Tailwind CSS", "React", "AWS Lambda"],
+			"Translated Figma designs into a responsive Next.js site for Fulcrum Solutions, backed by Go APIs on AWS Lambda and CMS content workflows for dynamic content delivery.",
+		technologies: ["Next.js", "TypeScript", "Tailwind CSS", "React", "Go", "AWS Lambda"],
 		features: [
 			"Responsive components built from Figma designs",
 			"CMS-driven dynamic content delivery",
-			"AWS Lambda integration for backend logic",
+			"Backend APIs in Go on AWS Lambda",
 			"Performance-optimized page load across layouts",
 		],
 		liveUrl: "https://www.nyfulcrum.com/",
