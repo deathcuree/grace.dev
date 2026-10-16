@@ -1,13 +1,15 @@
-import { useLocation } from 'react-router-dom';
-import { scroller } from 'react-scroll';
+import { useLocation, useNavigate } from 'react-router-dom';
+import { SECTION_PATHS } from '../constants/sections';
 
 const Footer = () => {
 	const year = new Date().getFullYear();
 	const location = useLocation();
+	const navigate = useNavigate();
+	const onHomePage = (Object.values(SECTION_PATHS) as string[]).includes(location.pathname);
 
 	const backToTop = () => {
-		if (location.pathname === '/') {
-			scroller.scrollTo('home', { duration: 800, smooth: 'easeInOutQuart', offset: -80 });
+		if (onHomePage) {
+			navigate(SECTION_PATHS.home);
 		} else {
 			window.scrollTo({ top: 0, behavior: 'smooth' });
 		}

@@ -1,13 +1,13 @@
-import { useParams, useNavigate } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import Nav from './Nav';
 import Footer from './Footer';
 import StatusBadge from './StatusBadge';
 import projectsData from '../data/projectsData';
+import { SECTION_PATHS } from '../constants/sections';
 
 const ProjectDetail = () => {
 	const { projectId } = useParams<{ projectId: string }>();
 	const project = projectId ? projectsData[projectId] : undefined;
-	const navigate = useNavigate();
 
 	if (!project) {
 		return (
@@ -81,13 +81,9 @@ const ProjectDetail = () => {
 										{project.status === 'archived' ? 'Learn more' : 'View live site'}
 									</a>
 								)}
-								<button
-									type="button"
-									className="btn"
-									onClick={() => navigate('/', { state: { scrollTo: 'project' } })}
-								>
+								<Link to={SECTION_PATHS.project} className="btn">
 									Back to projects
-								</button>
+								</Link>
 							</div>
 						</div>
 					</div>

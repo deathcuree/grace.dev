@@ -10,15 +10,15 @@ export const STACK: StackGroup[] = [
 	},
 	{
 		label: 'Frontend',
-		items: ['React', 'Next.js', 'Angular', 'TypeScript', 'JavaScript', 'Tailwind CSS', 'Styled Components', 'Ant Design', 'Bootstrap'],
+		items: ['React', 'Next.js', 'Angular', 'TypeScript', 'JavaScript', 'Tailwind CSS', 'Styled Components', 'Ant Design', 'PrimeNG', 'Bootstrap'],
 	},
 	{
 		label: 'Backend',
-		items: ['Node.js', 'Nest.js', 'Express.js', 'Python (FastAPI)', 'PHP', 'ASP.NET Web Forms'],
+		items: ['Node.js', 'Nest.js', 'Express.js', 'Python (FastAPI)', 'Go', 'PHP', 'C#', 'ASP.NET Web Forms'],
 	},
 	{
 		label: 'Data & caching',
-		items: ['MongoDB', 'MySQL', 'Redis'],
+		items: ['MongoDB', 'MySQL', 'PostgreSQL', 'DynamoDB', 'Redis'],
 	},
 	{
 		label: 'Cloud & DevOps',
@@ -30,12 +30,17 @@ export const STACK: StackGroup[] = [
 			'S3',
 			'SES',
 			'CloudWatch',
+			'X-Ray',
 			'Amplify',
 			'Serverless Framework',
 			'Jenkins',
 			'GitHub Actions',
 			'Docker',
 		],
+	},
+	{
+		label: 'Payments',
+		items: ['Stripe', 'PayPal', 'Apple Pay', 'PayMongo'],
 	},
 	{
 		label: 'CMS & no-code',
