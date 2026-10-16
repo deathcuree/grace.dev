@@ -44,6 +44,6 @@ export const STACK: StackGroup[] = [
 	},
 	{
 		label: 'CMS & no-code',
-		items: ['WordPress', 'Framer'],
+		items: ['Strapi', 'WordPress', 'Framer'],
 	},
 ];
