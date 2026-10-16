@@ -10,6 +10,8 @@ import portfolio5 from "../assets/portfolio-img5.webp";
 import myKidReports from "../assets/my-kid-reports.webp";
 import huntMyself from "../assets/hunt-myself.webp";
 import leadFinder from "../assets/lead-finder.webp";
+import complianceTrainingFunnel from "../assets/compliance-training-funnel.webp";
+import complianceBillingPortal from "../assets/compliance-billing-portal.webp";
 
 export type ProjectStatus = "live" | "progress" | "archived" | "private";
 
@@ -191,6 +193,37 @@ const projectsData: Record<string, Project> = {
 			"Performance-optimized page load across layouts",
 		],
 		liveUrl: "https://www.nyfulcrum.com/",
+	},
+	"compliance-training-funnel": {
+		title: "Compliance Training Funnel",
+		category: "WordPress funnel & LMS",
+		status: "live",
+		image: complianceTrainingFunnel,
+		description:
+			"A WordPress registration funnel and training platform where healthcare practices sign up and their staff complete mandatory OSHA training and certification. I built features and fixed bugs across the whole journey, from the first registration step through to taking lessons.",
+		technologies: ["WordPress", "PHP", "JavaScript", "MySQL", "PayPal", "AWS EC2"],
+		features: [
+			"Practice registration funnel",
+			"Separate employer and employee portals",
+			"Authentication and routing fixes across the funnel",
+			"Payment integration, including the apply-payment flow and PayPal",
+			"Removed WordPress payment integrations as billing moved to the Stripe-based portal",
+			"Lessons, quizzes, and certification flow",
+			"Bug fixes across the full user journey",
+			"SSH deployments to AWS EC2",
+		],
+		liveUrl: "https://funneldev.enviromerica.com/lms/member-registration/",
+	},
+	"compliance-billing-portal": {
+		title: "Compliance Billing Portal",
+		category: "Legacy ASP.NET app",
+		status: "live",
+		image: complianceBillingPortal,
+		description:
+			"A legacy ASP.NET Web Forms compliance portal for healthcare practices. I owned its deployments, which were manual releases to an RDS-backed legacy stack with no CI/CD, and helped set up its Stripe billing portal.",
+		technologies: ["ASP.NET Web Forms", "C#", "Stripe", "AWS RDS"],
+		features: ["Manual production deployments", "Stripe billing portal setup", "Maintenance of the legacy stack"],
+		liveUrl: "https://portal.enviromerica.com/Login.aspx?ReturnUrl=%2f",
 	},
 	"csv-importer": {
 		title: "CSV Importer Tool",
