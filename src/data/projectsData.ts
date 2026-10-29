@@ -2,6 +2,15 @@ import nyFulcrumWebsite from "../assets/nyfulcrum-website.webp";
 import starconcordWebsite from "../assets/starconcord-website.webp";
 import sheVirtualAssistance from "../assets/she-virtual-assistance.webp";
 import timeTracker from "../assets/time-tracker.webp";
+import timeTrackerUserDashboardDark from "../assets/time-tracker-user-dashboard-dark.webp";
+import timeTrackerUserDashboardLight from "../assets/time-tracker-user-dashboard-light.webp";
+import timeTrackerTimeHistoryDark from "../assets/time-tracker-time-history-dark.webp";
+import timeTrackerTimeHistoryLight from "../assets/time-tracker-time-history-light.webp";
+import timeTrackerEditTimeEntryDark from "../assets/time-tracker-edit-time-entry-dark.webp";
+import timeTrackerEditTimeEntryLight from "../assets/time-tracker-edit-time-entry-light.webp";
+import timeTrackerAccountSettingsDark from "../assets/time-tracker-account-settings-dark.webp";
+import timeTrackerAccountSettingsLight from "../assets/time-tracker-account-settings-light.webp";
+import timeTrackerLogin from "../assets/time-tracker-login.webp";
 import jobBoard from "../assets/job-board.webp";
 import aiJobCreationTool from "../assets/ai-job-creation-tool.webp";
 import importJobTool from "../assets/import-job-tool.webp";
@@ -10,16 +19,25 @@ import portfolio5 from "../assets/portfolio-img5.webp";
 import myKidReports from "../assets/my-kid-reports.webp";
 import huntMyself from "../assets/hunt-myself.webp";
 import leadFinder from "../assets/lead-finder.webp";
+import leadFinderLead from "../assets/lead-finder-lead.webp";
+import leadFinderApplied from "../assets/lead-finder-applied.webp";
 import complianceTrainingFunnel from "../assets/compliance-training-funnel.webp";
 import complianceBillingPortal from "../assets/compliance-billing-portal.webp";
 
 export type ProjectStatus = "live" | "progress" | "archived" | "private";
+
+export interface Screenshot {
+	image: string;
+	caption: string;
+}
 
 export interface Project {
 	title: string;
 	category: string;
 	status: ProjectStatus;
 	image?: string;
+	/** Extra screenshots shown in the gallery on the project page. */
+	gallery?: Screenshot[];
 	description: string;
 	technologies: string[];
 	features: string[];
@@ -57,23 +75,47 @@ const projectsData: Record<string, Project> = {
 	},
 	"lead-finder": {
 		title: "Lead Finder",
-		category: "AI lead-finding tool",
-		status: "private",
+		category: "AI lead-finding web app",
+		status: "live",
 		image: leadFinder,
+		gallery: [
+			{
+				image: leadFinderLead,
+				caption: "A lead opened: the score with its written reason, hirer, hours and rate, the closest matching projects, and a drafted pitch ready to copy.",
+			},
+			{
+				image: leadFinderApplied,
+				caption: "Leads filtered by status to track applications, with a same-company check that flags other roles from a company already applied to.",
+			},
+		],
 		description:
-			"A local tool that collects leads every day, scores each one against my profile with Claude Code, drafts a tailored message for the strong ones, and tracks their status in a dashboard. It drafts; I send.",
-		technologies: ["TypeScript", "Node.js", "React", "Claude Code", "SQLite", "Hono", "Tailwind CSS", "shadcn/ui", "Chrome Extension", "Gmail API"],
+			"An invite-only web app that collects freelance leads, scores each one against the user's résumé with Gemini, drafts a tailored pitch for the strong ones, and tracks applications. It started as a local tool for myself and now runs hosted for several users. It drafts; you send.",
+		technologies: [
+			"TypeScript",
+			"React",
+			"NestJS",
+			"PostgreSQL",
+			"Drizzle",
+			"Gemini API",
+			"AWS Lambda",
+			"Vercel",
+			"Tailwind CSS",
+			"shadcn/ui",
+			"Chrome Extension",
+		],
 		features: [
-			"Daily collection from public feeds, stored once and deduplicated across sources",
-			"Email alerts read from Gmail with read-only OAuth access",
-			"Browser extension that saves the page I have open, for sources without a feed",
-			"AI scoring of each lead against my profile and portfolio, with a written reason and the closest matching projects",
-			"Hard filtering rules applied in code rather than left to the model",
-			"Message drafted for strong leads from my real experience and projects, editable and never sent automatically",
-			"React dashboard with ranked leads, status tracking, and light and dark themes",
-			"Scheduled daily run on macOS, with the result of each run reported in the dashboard",
+			"Invite-only accounts with email, password, and an emailed sign-in code",
+			"Browser Save button that sends the job page I have open, so the app never contacts job sites itself",
+			"Each user's own profile, rules, and Gemini key, with the key stored encrypted",
+			"Background scoring queue that ranks each lead against the user's résumé, with a written reason and the closest matching projects",
+			"Rate conversion, rate floor, filtering, and ordering applied in code from each user's rules rather than left to the model",
+			"Pitch drafted for strong leads, editable and never sent automatically",
+			"Status tracking for applications, with a same-company check",
+			"Admin page for inviting users",
+			"NestJS API on AWS Lambda with Postgres, React site on Vercel, and separate development and production stages",
 			"Built spec-first with agentic Claude Code workflows and covered by offline tests",
 		],
+		liveUrl: "https://lead-finder-phi-nine.vercel.app/",
 	},
 	jobflow24: {
 		title: "JobFlow24",
@@ -157,14 +199,57 @@ const projectsData: Record<string, Project> = {
 		status: "live",
 		featured: true,
 		image: timeTracker,
-		description: "Time tracking and PTO management with role-based dashboards, report generation, and admin controls — deployed serverless on AWS.",
-		technologies: ["React", "TypeScript", "Tailwind", "Node.js", "Express", "MongoDB", "AWS Lambda"],
+		gallery: [
+			{
+				image: timeTrackerUserDashboardDark,
+				caption: "The dashboard: clock in and out for today, this week's hours by day, PTO left for the year, and recent entries.",
+			},
+			{
+				image: timeTrackerUserDashboardLight,
+				caption: "The same dashboard in the light theme.",
+			},
+			{
+				image: timeTrackerTimeHistoryDark,
+				caption: "Time history filtered by year, month, and status, with edits allowed on entries from the last 7 days.",
+			},
+			{
+				image: timeTrackerTimeHistoryLight,
+				caption: "Time history in the light theme.",
+			},
+			{
+				image: timeTrackerEditTimeEntryDark,
+				caption: "Editing an entry: clock-in and clock-out times, breaks, and shifts that end the next day, with the worked hours calculated live.",
+			},
+			{
+				image: timeTrackerEditTimeEntryLight,
+				caption: "The edit pop-up in the light theme.",
+			},
+			{
+				image: timeTrackerAccountSettingsDark,
+				caption: "Account settings for updating your name and changing your password.",
+			},
+			{
+				image: timeTrackerAccountSettingsLight,
+				caption: "Account settings in the light theme.",
+			},
+			{
+				image: timeTrackerLogin,
+				caption: "Sign-in page.",
+			},
+		],
+		description:
+			"Time tracking and PTO management for a virtual assistance team, with break-aware hours, role-based dashboards, Excel reports, and admin controls — deployed serverless on AWS.",
+		technologies: ["React", "TypeScript", "Tailwind", "shadcn/ui", "Node.js", "Express", "MongoDB", "AWS Lambda"],
 		features: [
-			"Time tracking and project management",
-			"Report generation",
-			"PTO tracking and request management",
-			"User authentication and role-based permissions",
-			"Admin dashboard for user management",
+			"Clock in and out, with pause and resume for breaks",
+			"Break-aware hours, with breaks and next-day shifts editable on each entry",
+			"Dashboard with today's timer, this week's hours by day, and recent entries",
+			"Time history with year, month, and status filters",
+			"PTO requests with approval, a monthly calendar, and hours left for the year",
+			"Per-user schedule settings set by admins",
+			"Admin time logs to view, edit, and add any user's entries, with Excel export",
+			"Role-based permissions, including a read-only role for automated reporting",
+			"Light and dark themes",
 		],
 		liveUrl: "https://time-tracker-delta-ashen.vercel.app/",
 	},

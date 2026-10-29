@@ -14,7 +14,7 @@ test.describe('Projects', () => {
 		await expect(page.getByRole('heading', { name: 'Overview' })).toBeVisible();
 		await expect(page.getByRole('heading', { name: 'Technologies' })).toBeVisible();
 		await expect(page.getByRole('heading', { name: 'Key features' })).toBeVisible();
-		await expect(page.getByText('PTO tracking and request management')).toBeVisible();
+		await expect(page.getByText('Break-aware hours, with breaks and next-day shifts editable on each entry')).toBeVisible();
 	});
 
 	test('a live project links out to its site in a new tab', async ({ page }) => {
@@ -45,6 +45,43 @@ test.describe('Projects', () => {
 		await expect(section.locator('a[href="/project/compliance-training-funnel"]')).toBeVisible();
 		await expect(section.locator('a[href="/project/compliance-billing-portal"]')).toBeVisible();
 		await expect(section.getByText(/Fourteen projects/)).toBeVisible();
+	});
+
+	test('clicking a project screenshot opens a gallery that steps through its screenshots', async ({ page }) => {
+		await page.goto('/project/lead-finder');
+		await page.getByRole('button', { name: 'View Lead Finder screenshots' }).click();
+
+		const dialog = page.getByRole('dialog', { name: 'Screenshots' });
+		await expect(dialog).toBeVisible();
+		await expect(dialog.getByText('1 / 2')).toBeVisible();
+		await expect(dialog.getByText(/drafted pitch ready to copy/)).toBeVisible();
+
+		await dialog.getByRole('button', { name: 'Next screenshot' }).click();
+		await expect(dialog.getByText('2 / 2')).toBeVisible();
+		await expect(dialog.getByText(/same-company check/)).toBeVisible();
+
+		await page.keyboard.press('ArrowRight');
+		await expect(dialog.getByText('1 / 2')).toBeVisible();
+
+		await page.keyboard.press('Escape');
+		await expect(dialog).toHaveCount(0);
+	});
+
+	test('a gallery thumbnail opens the modal at that screenshot', async ({ page }) => {
+		await page.goto('/project/lead-finder');
+		await page.getByRole('button', { name: 'Open screenshot 2' }).click();
+		const dialog = page.getByRole('dialog', { name: 'Screenshots' });
+		await expect(dialog.getByText('2 / 2')).toBeVisible();
+		await dialog.getByRole('button', { name: 'Close' }).click();
+		await expect(dialog).toHaveCount(0);
+	});
+
+	test('a project with one screenshot opens it in the modal without arrows', async ({ page }) => {
+		await page.goto('/project/hunt-myself');
+		await page.getByRole('button', { name: 'View Hunt Myself screenshots' }).click();
+		const dialog = page.getByRole('dialog', { name: 'Screenshots' });
+		await expect(dialog.getByText('1 / 1')).toBeVisible();
+		await expect(dialog.getByRole('button', { name: 'Next screenshot' })).toHaveCount(0);
 	});
 
 	test('an unknown project id shows a not-found message', async ({ page }) => {
