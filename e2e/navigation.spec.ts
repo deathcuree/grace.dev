@@ -81,11 +81,29 @@ test.describe('Navigation', () => {
 		await expect(page.getByRole('heading', { level: 1, name: 'Kid Reports' })).toBeVisible();
 	});
 
+	test('a project opened from further down the home page starts at the top', async ({ page }) => {
+		await page.goto('/projects');
+		await page.locator('a[href="/project/lead-finder"]').click();
+		await expect(page).toHaveURL(/\/project\/lead-finder$/);
+		await expect(page.getByRole('heading', { level: 1, name: 'Lead Finder' })).toBeInViewport();
+		expect(await page.evaluate(() => window.scrollY)).toBe(0);
+	});
+
 	test('"Back to projects" returns to the projects section', async ({ page }) => {
 		await page.goto('/project/she-time-tracker');
 		await page.getByRole('link', { name: 'Back to projects' }).click();
 		await expect(page).toHaveURL(/\/projects$/);
 		await expect(page.locator('#project')).toBeInViewport();
+	});
+
+	test('"Back to projects" returns to the project that was opened', async ({ page }) => {
+		await page.goto('/projects');
+		await page.locator('a[href="/project/starconcord"]').click();
+		await expect(page).toHaveURL(/\/project\/starconcord$/);
+		await page.getByRole('link', { name: 'Back to projects' }).click();
+		await expect(page).toHaveURL(/\/projects$/);
+		await expect(page.locator('#project-starconcord')).toBeInViewport();
+		await expect(page.locator('#project-kid-reports')).not.toBeInViewport();
 	});
 
 	test('the header stays visible while scrolling', async ({ page }) => {
