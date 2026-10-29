@@ -60,7 +60,7 @@ const Projects = () => {
 
 				<div className="grid grid-cols-1 gap-x-10 gap-y-12 md:grid-cols-2 lg:grid-cols-3">
 					{rest.map(([id, project]) => (
-						<Link key={id} to={`/project/${id}`} className="group block">
+						<Link key={id} id={`project-${id}`} to={`/project/${id}`} className="group block">
 							<ProjectMedia project={project} className="mb-5 aspect-[4/3] rounded-[10px] shadow-[0_0_0_1px_rgb(var(--color-line))] transition-shadow group-hover:shadow-[0_12px_28px_-12px_rgba(20,20,20,0.18),0_0_0_1px_rgb(var(--color-line))]" />
 							<div className="mb-3 flex items-center gap-3.5">
 								<StatusBadge status={project.status} />
@@ -82,7 +82,7 @@ const Projects = () => {
 };
 
 const FeaturedProject = ({ id, project }: { id: string; project: Project }) => (
-	<Link to={`/project/${id}`} className="group mb-20 grid items-center gap-11 lg:grid-cols-[1.1fr_0.9fr]">
+	<Link id={`project-${id}`} to={`/project/${id}`} className="group mb-20 grid items-center gap-11 lg:grid-cols-[1.1fr_0.9fr]">
 		<ProjectMedia project={project} className="aspect-[4/3] rounded-xl" fit="contain" />
 		<div>
 			<div className="mb-[18px] flex items-center gap-3.5">
