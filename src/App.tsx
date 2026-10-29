@@ -63,7 +63,10 @@ const SectionRouting = () => {
 			return;
 		}
 		const sectionId = sectionByPath[location.pathname];
-		const el = sectionId && document.getElementById(sectionId);
+		// "Back to projects" passes the project it came from, so the page returns to that card.
+		const projectId = (location.state as { projectId?: string } | null)?.projectId;
+		const el =
+			(projectId && document.getElementById(`project-${projectId}`)) || (sectionId && document.getElementById(sectionId));
 		// A fresh load of "/" stays at the top; every other visit scrolls to its section.
 		if (!el || (firstRender && sectionId === 'home')) return;
 		const top = sectionId === 'home' ? 0 : el.getBoundingClientRect().top + window.scrollY - HEADER_OFFSET;
@@ -89,7 +92,7 @@ const SectionRouting = () => {
 		autoScroll.current = finish;
 		window.addEventListener('scrollend', onScrollEnd);
 		window.scrollTo({ top, behavior: 'smooth' });
-	}, [location.key, location.pathname, syncUrlToScroll]);
+	}, [location.key, location.pathname, location.state, syncUrlToScroll]);
 
 	useEffect(() => {
 		let frame = 0;

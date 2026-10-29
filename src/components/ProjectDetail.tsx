@@ -1,3 +1,4 @@
+import { useLayoutEffect } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import Nav from './Nav';
 import Footer from './Footer';
@@ -9,6 +10,11 @@ import { SECTION_PATHS } from '../constants/sections';
 const ProjectDetail = () => {
 	const { projectId } = useParams<{ projectId: string }>();
 	const project = projectId ? projectsData[projectId] : undefined;
+
+	// The router keeps the previous page's scroll position; a project page always opens at the top.
+	useLayoutEffect(() => {
+		window.scrollTo({ top: 0 });
+	}, [projectId]);
 
 	if (!project) {
 		return (
@@ -74,7 +80,7 @@ const ProjectDetail = () => {
 										{project.status === 'archived' ? 'Learn more' : 'View live site'}
 									</a>
 								)}
-								<Link to={SECTION_PATHS.project} className="btn">
+								<Link to={SECTION_PATHS.project} state={{ projectId }} className="btn">
 									Back to projects
 								</Link>
 							</div>
