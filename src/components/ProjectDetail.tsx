@@ -2,6 +2,7 @@ import { Link, useParams } from 'react-router-dom';
 import Nav from './Nav';
 import Footer from './Footer';
 import StatusBadge from './StatusBadge';
+import ProjectGallery from './ProjectGallery';
 import projectsData from '../data/projectsData';
 import { SECTION_PATHS } from '../constants/sections';
 
@@ -31,15 +32,7 @@ const ProjectDetail = () => {
 					</div>
 
 					<div className="grid grid-cols-1 gap-12 lg:grid-cols-2">
-						<div className="aspect-[4/3] overflow-hidden rounded-xl bg-surface-2">
-							{project.image ? (
-								<img src={project.image} alt={project.title} className="h-full w-full object-contain" />
-							) : (
-								<div className="flex h-full w-full items-center justify-center text-sm text-ink-faint">
-									{project.category}
-								</div>
-							)}
-						</div>
+						<ProjectGallery project={project} />
 
 						<div className="flex flex-col justify-between">
 							<div>
